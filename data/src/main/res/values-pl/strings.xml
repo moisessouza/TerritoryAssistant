@@ -1,0 +1,9 @@
+<resources>
+
+    <string name="error_no_wifi">Wystąpił błąd przy pobieraniu adresu IP urządzenia w sieci Wi-Fi</string>
+    
+    <string name="playback">Odtwarzanie</string>
+    <string name="subtitles">Napisy</string>
+    <string name="misc">Różne</string>
+    <string name="error_connection_timeout">Przekroczono limit czasu połączenia</string>
+</resources>

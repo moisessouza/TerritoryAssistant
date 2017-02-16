@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--
+        Next   (chapter)
+        Previous
+        Fullscreen
+
+        Next_File
+        Previous_File
+
+        ************
+
+        Subtitles
+
+        On_Off_Subtitle
+        Next_Subtitle
+        Prev_Subtitle
+
+        Subtitle_Delay_minus
+        Subtitle_Delay_plus
+        -->
+
+    <string name="pref_port_key">Default port</string>
+    <string name="pref_port_default">13579</string>
+
+    <string name="pref_current_server_ip_key">Current server IP</string>
+    <string name="pref_current_server_ip_default">127.0.0.1</string>
+
+
+    <!--Button config related preferences-->
+
+
+
+    <string name="pref_tab_count_key">Number of tabs</string>
+    <integer name="pref_tab_count_default">3</integer>
+
+    <string name="pref_buttons_count_key">Buttons on each tab</string>
+    <integer name="pref_buttons_count_default">9</integer>
+
+<!-- First button tab -->
+    <string name="pref_tab0_name_key">Name of Tab#0</string>
+    <string name="pref_tab0_name_default">Playback</string>
+
+
+    <string name="pref_tab0_button0_key">Tab #0 Button #0</string>
+    <integer name="pref_tab0_button0_default">0</integer>
+
+    <string name="pref_tab0_button1_key">Tab #0 Button #1</string>
+    <integer name="pref_tab0_button1_default">920</integer>
+
+    <string name="pref_tab0_button2_key">Tab #0 Button #2</string>
+    <integer name="pref_tab0_button2_default">0</integer>
+
+    <string name="pref_tab0_button3_key">Tab #0 Button #3</string>
+    <integer name="pref_tab0_button3_default">921</integer>
+
+    <string name="pref_tab0_button4_key">Tab #0 Button #4</string>
+    <integer name="pref_tab0_button4_default">830</integer>
+
+    <string name="pref_tab0_button5_key">Tab #0 Button #5</string>
+    <integer name="pref_tab0_button5_default">922</integer>
+
+    <string name="pref_tab0_button6_key">Tab #0 Button #6</string>
+    <integer name="pref_tab0_button6_default">0</integer>
+
+    <string name="pref_tab0_button7_key">Tab #0 Button #7</string>
+    <integer name="pref_tab0_button7_default">919</integer>
+
+    <string name="pref_tab0_button8_key">Tab #0 Button #8</string>
+    <integer name="pref_tab0_button8_default">0</integer>
+
+
+
+
+    <!-- Second button tab -->
+
+
+
+    <string name="pref_tab1_name_key">Name of Tab#1</string>
+    <string name="pref_tab1_name_default">Subtitles</string>
+
+
+    <string name="pref_tab1_button0_key">Tab #1 Button #0</string>
+    <integer name="pref_tab1_button0_default">955</integer>
+
+    <string name="pref_tab1_button1_key">Tab #1 Button #1</string>
+    <integer name="pref_tab1_button1_default">954</integer>
+
+    <string name="pref_tab1_button2_key">Tab #1 Button #2</string>
+    <integer name="pref_tab1_button2_default">956</integer>
+
+    <string name="pref_tab1_button3_key">Tab #1 Button #3</string>
+    <integer name="pref_tab1_button3_default">24000</integer>
+
+    <string name="pref_tab1_button4_key">Tab #1 Button #4</string>
+    <integer name="pref_tab1_button4_default">24001</integer>
+
+    <string name="pref_tab1_button5_key">Tab #1 Button #5</string>
+    <integer name="pref_tab1_button5_default">0</integer>
+
+    <string name="pref_tab1_button6_key">Tab #1 Button #6</string>
+    <integer name="pref_tab1_button6_default">0</integer>
+
+    <string name="pref_tab1_button7_key">Tab #1 Button #7</string>
+    <integer name="pref_tab1_button7_default">0</integer>
+
+    <string name="pref_tab1_button8_key">Tab #1 Button #8</string>
+    <integer name="pref_tab1_button8_default">0</integer>
+
+
+
+    <!-- Third button tab -->
+    <string name="pref_tab2_name_key">Name of Tab#2</string>
+    <string name="pref_tab2_name_default">Misc</string>
+
+
+    <string name="pref_tab2_button0_key">Tab #2 Button #0</string>
+    <integer name="pref_tab2_button0_default">948</integer>
+
+    <string name="pref_tab2_button1_key">Tab #2 Button #1</string>
+    <integer name="pref_tab2_button1_default">918</integer>
+
+    <string name="pref_tab2_button2_key">Tab #2 Button #2</string>
+    <integer name="pref_tab2_button2_default">915</integer>
+
+    <string name="pref_tab2_button3_key">Tab #2 Button #3</string>
+    <integer name="pref_tab2_button3_default">944</integer>
+
+    <string name="pref_tab2_button4_key">Tab #2 Button #4</string>
+    <integer name="pref_tab2_button4_default">884</integer>
+
+    <string name="pref_tab2_button5_key">Tab #2 Button #5</string>
+    <integer name="pref_tab2_button5_default">0</integer>
+
+    <string name="pref_tab2_button6_key">Tab #2 Button #6</string>
+    <integer name="pref_tab2_button6_default">0</integer>
+
+    <string name="pref_tab2_button7_key">Tab #2 Button #7</string>
+    <integer name="pref_tab2_button7_default">0</integer>
+
+    <string name="pref_tab2_button8_key">Tab #2 Button #8</string>
+    <integer name="pref_tab2_button8_default">0</integer>
+
+
+
+
+</resources>

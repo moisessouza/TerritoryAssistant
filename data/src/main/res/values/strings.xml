@@ -1,0 +1,8 @@
+<resources>
+    <string name="error_no_wifi">Error retrieving devices Wi-Fi IP address</string>
+    <string name="teststring">testsss</string>
+    <string name="playback">Playback</string>
+    <string name="subtitles">Subtitles</string>
+    <string name="misc">Misc</string>
+    <string name="error_connection_timeout">Connection timed out</string>
+</resources>

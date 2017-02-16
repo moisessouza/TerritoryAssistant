@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="userpref_server_screen_key">userpref_server_screen_key</string>
+
+    <string name="userpref_server_finder_key">userpref_server_finder</string>
+    <bool name="userpref_server_finder_key_default">true</bool>
+
+    <string name="userpref_custom_ip_key">userpref_custom_ip</string>
+    <string name="userpref_custom_ip_default">127.0.0.1</string>
+
+    <string name="userpref_port_key">userpref_port</string>
+    <string name="userpref_port_default">13579</string>
+
+    <string name="userpref_connection_timeout_key">userpref_connection_timeout</string>
+    <string name="userpref_connection_timeout_default">1000</string>
+
+    <string name="userpref_scanner_retries_key">userpref_scanner_retries</string>
+    <string name="userpref_scanner_retries_default">2</string>
+
+    <string name="userpref_vol_jump_key">userpref_vol_jump</string>
+    <integer name="userpref_vol_jump_default">5</integer>
+
+    <string name="userpref_time_jump_key">userpref_time_jump</string>
+    <integer name="userpref_time_jump_default">10</integer>
+
+    <string name="userpref_physical_buttons_key">userpref_physical_buttons</string>
+    <bool name="userpref_physical_buttons_default">true</bool>
+
+    <string name="userpref_keep_screen_on_key">userpref_keep_screen_on</string>
+    <bool name="userpref_keep_screen_on_default">true</bool>
+
+    <string name="userpref_brighness_key">userpref_brighness</string>
+    <bool name="userpref_brighness_default">false</bool>
+
+    <string name="userpref_widget_key">userpref_widget</string>
+    <bool name="userpref_widget_default">true</bool>
+
+    <string name="userpref_snapshot_key">userpref_snapshot</string>
+    <bool name="userpref_snapshot_default">true</bool>
+
+    <string name="userpref_snapshot_update_key">userpref_snapshot_update</string>
+    <integer name="userpref_snapshot_update_default">5</integer>
+
+    <string name="userpref_factory_reset_key">userpref_factory_reset</string>
+
+    <string name="userpref_about_key">userpref_about</string>
+
+</resources>
