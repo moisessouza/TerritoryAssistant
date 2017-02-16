@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+                  xmlns:preference="http://schemas.android.com/apk/res-auto">
+
+
+    <PreferenceCategory
+            android:title="@string/visible_pref_server">
+        <PreferenceScreen android:key="@string/userpref_server_screen_key"
+                          android:title="@string/visible_pref_server_settings"/>
+    </PreferenceCategory>
+
+
+    <PreferenceCategory
+            android:title="@string/visible_pref_buttons">
+        <ged.mediaplayerremote.presentation.sharedpreferences.NumberPickerPreference
+                android:defaultValue="@integer/userpref_time_jump_default"
+                android:key="@string/userpref_time_jump_key"
+                android:title="@string/visible_pref_time_jump"
+
+                preference:maxValue="60"
+                preference:minValue="1"
+                preference:wrapSelectorWheel="false"
+                preference:message="@string/visible_pref_time_jump_message"
+                preference:unit="s"/>
+
+        <ged.mediaplayerremote.presentation.sharedpreferences.NumberPickerPreference
+            android:defaultValue="@integer/userpref_vol_jump_default"
+            android:key="@string/userpref_vol_jump_key"
+            android:title="@string/visible_pref_volume_jump"
+            preference:maxValue="20"
+            preference:minValue="1"
+            preference:wrapSelectorWheel="false"
+            preference:message="@string/visible_pref_volume_jump_message"
+            preference:unit="%"/>
+
+
+        <CheckBoxPreference
+                android:title="@string/visible_pref_use_physical_volume_buttons"
+                android:key="@string/userpref_physical_buttons_key"
+                android:defaultValue="@bool/userpref_physical_buttons_default"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory
+            android:title="@string/visible_pref_screen">
+        <CheckBoxPreference
+                android:title="@string/visible_pref_keep_screen_on"
+                android:key="@string/userpref_keep_screen_on_key"
+                android:defaultValue="@bool/userpref_keep_screen_on_default"/>
+        <CheckBoxPreference
+                android:title="@string/visible_pref_turn_brightness_to_min"
+                android:key="@string/userpref_brighness_key"
+                android:defaultValue="@bool/userpref_brighness_default"/>
+        <CheckBoxPreference
+                android:title="@string/visible_pref_widget_on_lockscreen"
+                android:key="@string/userpref_widget_key"
+                android:defaultValue="@bool/userpref_widget_default"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory
+            android:title="@string/visible_pref_snapshot">
+        <CheckBoxPreference
+                android:title="@string/visible_pref_display_snapshot"
+                android:key="@string/userpref_snapshot_key"
+                android:defaultValue="@bool/userpref_snapshot_default"
+                android:disableDependentsState="false"
+                android:summaryOff="@string/visible_pref_display_snapshot_summary_off"
+                android:summaryOn="@string/visible_pref_display_snapshot_summary_on"/>
+
+        <ged.mediaplayerremote.presentation.sharedpreferences.NumberPickerPreference
+                android:key="@string/userpref_snapshot_update_key"
+                android:title="@string/visible_pref_snapshot_update_interval"
+                android:dependency="@string/userpref_snapshot_key"
+                android:defaultValue="@integer/userpref_snapshot_update_default"
+                preference:maxValue="60"
+                preference:minValue="1"
+                preference:wrapSelectorWheel="false"
+                preference:message="@string/visible_pref_snapshot_update_interval_message"
+                preference:unit="s"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/visible_pref_factory_reset_category">
+        <ged.mediaplayerremote.presentation.sharedpreferences.ResetPreference
+            android:title="@string/visible_pref_factory_reset"
+            android:key="@string/userpref_factory_reset_key"
+            android:dialogTitle="@string/visible_pref_factory_reset"
+            android:dialogMessage="@string/visible_pref_factory_reset_message"
+            android:negativeButtonText="@string/cancel"
+            android:positiveButtonText="@string/dialog_confirm_delete_yes"
+            preference:buttonColor="@color/accent100"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/visible_pref_about">
+
+        <ged.mediaplayerremote.presentation.sharedpreferences.BaseDialogPreference
+            android:title="@string/visible_pref_about"
+            android:key="@string/userpref_about_key"
+            android:dialogTitle="@string/app_name"
+            android:dialogMessage="@string/visible_pref_about_message"
+            android:positiveButtonText="@string/ok"
+            android:negativeButtonText=""
+            preference:buttonColor="@color/accent100"/>
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

@@ -1,0 +1,29 @@
+<resources>
+
+    <style name="BaseAppTheme" parent="Theme.AppCompat">
+        <item name="colorPrimary">@color/material900</item>
+        <item name="colorPrimaryDark">@color/materialBlack</item>
+        <item name="colorAccent">@color/accent100</item>
+        <item name="windowActionBar">true</item>
+        <item name="windowNoTitle">false</item>
+        <item name="android:textColor">@color/materialWhite</item>
+        <item name="android:textColorSecondary">@color/material400</item>
+        <item name="dialogPreferredPadding">16dp</item>
+    </style>
+
+    <style name="SplashScreenTheme" parent="BaseAppTheme">
+        <item name="android:windowBackground">@drawable/splash_screen</item>
+    </style>
+
+    <style name="MainScreenTheme" parent="BaseAppTheme">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="PreferencesTheme" parent="BaseAppTheme">
+        <item name="android:textColor">@color/preference_primary_text_color_selector</item>
+        <item name="android:textColorSecondary">@color/preference_secondary_text_color_selector</item>
+    </style>
+
+
+</resources>

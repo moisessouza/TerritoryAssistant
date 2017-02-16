@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+
+    <Preference android:key="@string/pref_port_key"
+                android:defaultValue="@string/pref_port_default"/>
+
+    <Preference android:key="@string/pref_current_server_ip_key"
+                android:defaultValue="@string/pref_current_server_ip_default"/>
+
+<!--    Button grid related preferences-->
+
+    <Preference
+            android:key="@string/pref_tab_count_key"
+            android:defaultValue="@integer/pref_tab_count_default" />
+
+
+
+    <!--  Tab 0 -->
+
+    <Preference
+            android:key="@string/pref_tab0_name_key"
+            android:defaultValue="@string/pref_tab0_name_default"/>
+
+    <Preference
+            android:key="@string/pref_tab0_button0_key"
+            android:defaultValue="@integer/pref_tab0_button0_default"/>
+
+    <Preference
+            android:key="@string/pref_tab0_button1_key"
+            android:defaultValue="@integer/pref_tab0_button1_default"/>
+
+    <Preference
+            android:key="@string/pref_tab0_button2_key"
+            android:defaultValue="@integer/pref_tab0_button2_default"/>
+
+    <Preference
+            android:key="@string/pref_tab0_button3_key"
+            android:defaultValue="@integer/pref_tab0_button3_default"/>
+
+    <Preference
+            android:key="@string/pref_tab0_button4_key"
+            android:defaultValue="@integer/pref_tab0_button4_default"/>
+
+    <Preference
+            android:key="@string/pref_tab0_button5_key"
+            android:defaultValue="@integer/pref_tab0_button5_default"/>
+
+    <Preference
+            android:key="@string/pref_tab0_button6_key"
+            android:defaultValue="@integer/pref_tab0_button6_default"/>
+
+    <Preference
+            android:key="@string/pref_tab0_button7_key"
+            android:defaultValue="@integer/pref_tab0_button7_default"/>
+
+    <Preference
+            android:key="@string/pref_tab0_button8_key"
+            android:defaultValue="@integer/pref_tab0_button8_default"/>
+
+
+    <!--  Tab 1 -->
+
+    <Preference
+            android:key="@string/pref_tab1_name_key"
+            android:defaultValue="@string/pref_tab1_name_default"/>
+
+    <Preference
+            android:key="@string/pref_tab1_button0_key"
+            android:defaultValue="@integer/pref_tab1_button0_default"/>
+
+    <Preference
+            android:key="@string/pref_tab1_button1_key"
+            android:defaultValue="@integer/pref_tab1_button1_default"/>
+
+    <Preference
+            android:key="@string/pref_tab1_button2_key"
+            android:defaultValue="@integer/pref_tab1_button2_default"/>
+
+    <Preference
+            android:key="@string/pref_tab1_button3_key"
+            android:defaultValue="@integer/pref_tab1_button3_default"/>
+
+    <Preference
+            android:key="@string/pref_tab1_button4_key"
+            android:defaultValue="@integer/pref_tab1_button4_default"/>
+
+    <Preference
+            android:key="@string/pref_tab1_button5_key"
+            android:defaultValue="@integer/pref_tab1_button5_default"/>
+
+    <Preference
+            android:key="@string/pref_tab1_button6_key"
+            android:defaultValue="@integer/pref_tab1_button6_default"/>
+
+    <Preference
+            android:key="@string/pref_tab1_button7_key"
+            android:defaultValue="@integer/pref_tab1_button7_default"/>
+
+    <Preference
+            android:key="@string/pref_tab1_button8_key"
+            android:defaultValue="@integer/pref_tab1_button8_default"/>
+
+    <!--  Tab 2 -->
+
+    <Preference
+            android:key="@string/pref_tab2_name_key"
+            android:defaultValue="@string/pref_tab2_name_default"/>
+
+    <Preference
+            android:key="@string/pref_tab2_button0_key"
+            android:defaultValue="@integer/pref_tab2_button0_default"/>
+
+    <Preference
+            android:key="@string/pref_tab2_button1_key"
+            android:defaultValue="@integer/pref_tab2_button1_default"/>
+
+    <Preference
+            android:key="@string/pref_tab2_button2_key"
+            android:defaultValue="@integer/pref_tab2_button2_default"/>
+
+    <Preference
+            android:key="@string/pref_tab2_button3_key"
+            android:defaultValue="@integer/pref_tab2_button3_default"/>
+
+    <Preference
+            android:key="@string/pref_tab2_button4_key"
+            android:defaultValue="@integer/pref_tab2_button4_default"/>
+
+    <Preference
+            android:key="@string/pref_tab2_button5_key"
+            android:defaultValue="@integer/pref_tab2_button5_default"/>
+
+    <Preference
+            android:key="@string/pref_tab2_button6_key"
+            android:defaultValue="@integer/pref_tab2_button6_default"/>
+
+    <Preference
+            android:key="@string/pref_tab2_button7_key"
+            android:defaultValue="@integer/pref_tab2_button7_default"/>
+
+    <Preference
+            android:key="@string/pref_tab2_button8_key"
+            android:defaultValue="@integer/pref_tab2_button8_default"/>
+
+</PreferenceScreen>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#000000</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#FFFFFF</color>
+
+    <color name="buttonDefault">#00000000</color>
+    <color name="buttonClicked">#66FFFFFF</color>
+    <color name="mainButtonColor">#333333</color>
+    <color name="mainButtonClicked">#99FFFFFF</color>
+
+    <color name="material900">#212121</color>
+    <color name="material800">#424242</color>
+    <color name="material700">#616161</color>
+    <color name="material600">#757575</color>
+    <color name="material500">#9E9E9E</color>
+    <color name="material400">#BDBDBD</color>
+    <color name="material300">#E0E0E0</color>
+    <color name="materialBlack">#000000</color>
+    <color name="materialWhite">#FFFFFF</color>
+    <color name="accent100">#80D8FF</color>
+    <color name="error">#D50000</color>
+
+    <color name="Green">#00FF00</color>
+    <color name="Blue">#0000FF</color>
+    <!--80D8FF-->
+
+</resources>

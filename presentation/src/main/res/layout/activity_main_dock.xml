@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        card_view:cardElevation="0dp"
+        card_view:cardCornerRadius="0dp">
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="vertical">
+
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="@color/material800"
+                android:id="@+id/progressBarLayout"
+                android:visibility="visible">
+
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="@string/remote_zero_time"
+                    android:id="@+id/position"
+                    android:layout_weight="0.05"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@android:color/primary_text_dark"
+                    android:gravity="center"/>
+
+            <SeekBar android:layout_width="0dp"
+                     android:layout_height="30dp"
+                     android:layout_weight="0.9"
+                     android:id="@+id/progressBar"
+                     android:progress="0"
+                     android:progressDrawable="@android:color/transparent"
+                     android:indeterminate="false"
+                     android:max="2147483647"
+
+                     android:thumb="@drawable/seekbar_thumb"
+                     android:elevation="6dp" android:layout_gravity="center_vertical"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="@string/remote_zero_time"
+                    android:id="@+id/duration"
+                    android:layout_weight="0.05"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@android:color/primary_text_dark"
+                    android:gravity="center"/>
+        </LinearLayout>
+
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="@color/material800"
+                android:id="@+id/volumeBar"
+                android:visibility="gone">
+
+
+            <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_volume_up_white_24dp"
+                    android:background="@drawable/button_background"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/volumeIcon"/>
+
+            <SeekBar android:layout_width="0dp"
+                     android:layout_height="30dp"
+                     android:minHeight="30dp"
+                     android:maxHeight="30dp"
+                     android:layout_weight="0.9"
+                     android:id="@+id/volumeSeekBar"
+                     android:progress="75"
+                     android:indeterminate="false"
+                     android:thumbOffset="0dp"
+
+                     android:layout_gravity="center_vertical"
+                     android:splitTrack="false"
+
+                     android:progressDrawable="@drawable/vertical_line3"
+                     android:focusableInTouchMode="false"
+                     android:thumb="@drawable/seekbar_thumb"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="75%"
+                    android:id="@+id/volume"
+                    android:layout_weight="0.05"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@android:color/primary_text_dark"
+                    android:gravity="center"/>
+        </LinearLayout>
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/material900"
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp"
+                android:paddingEnd="8dp"
+                android:paddingStart="8dp">
+            <android.support.percent.PercentRelativeLayout
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    >
+
+                <ImageButton
+                        android:src="@drawable/ic_fast_rewind_white_36dp"
+
+                        android:id="@+id/dock_rewind"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:background="@drawable/button_background"
+                        app:layout_widthPercent="20%"
+                        app:layout_aspectRatio="100%"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentStart="true"/>
+
+                <ImageButton
+                        android:src="@drawable/ic_fast_forward_white_36dp"
+
+                        android:id="@+id/dock_forward"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/dock_rewind"
+                        android:background="@drawable/button_background"
+                        app:layout_widthPercent="20%"
+                        app:layout_aspectRatio="100%"/>
+
+
+                <ImageButton
+                        android:src="@drawable/ic_play_arrow_white_36dp"
+
+                        android:id="@+id/mainButtonPlay"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_toRightOf="@+id/dock_forward"
+                        android:background="@drawable/main_button_background"
+                        app:layout_widthPercent="20%"
+                        app:layout_aspectRatio="100%" />
+                <ImageButton
+                        android:src="@drawable/ic_volume_down_white_36dp"
+
+                        android:id="@+id/dock_voldown"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_toRightOf="@+id/mainButtonPlay"
+                        android:background="@drawable/button_background"
+                        app:layout_widthPercent="20%"
+                        app:layout_aspectRatio="100%" />
+                <ImageButton
+                        android:src="@drawable/ic_volume_up_white_36dp"
+
+                        android:id="@+id/dock_volup"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_toRightOf="@+id/dock_voldown"
+                        android:background="@drawable/button_background"
+                        app:layout_widthPercent="20%"
+                        app:layout_aspectRatio="100%"/>
+
+
+            </android.support.percent.PercentRelativeLayout>
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+</android.support.v7.widget.CardView>
+
+
+

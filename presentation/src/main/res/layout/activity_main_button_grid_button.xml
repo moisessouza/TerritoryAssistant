@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/button_layout"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        app:cardBackgroundColor="@color/mainButtonColor"
+        app:cardCornerRadius="@dimen/button_grid_item_corner_radius"
+        android:outlineProvider="bounds">
+
+    <RelativeLayout android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="visible">
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@android:color/primary_text_dark"
+                android:text="Small Text"
+                android:id="@+id/button_desc"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:padding="@dimen/button_grid_item_textview_padding"
+                android:gravity="center"/>
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

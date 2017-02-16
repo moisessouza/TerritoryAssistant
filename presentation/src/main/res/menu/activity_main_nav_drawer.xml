@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <item android:icon="@drawable/ic_folder_open_white_36dp"
+              android:title="@string/file_manager"/>
+
+        <item android:id="@+id/edit_mode_toggle"
+              android:icon="@drawable/ic_mode_edit_white_36dp"
+              android:title="@string/edit_mode_switch"
+              app:actionLayout="@layout/activity_main_nav_drawer_edit_switch"
+              app:showAsAction="always"
+              android:checked="false"
+              android:checkable="true"/>
+
+
+        <item android:id="@+id/nav_manage"
+              android:icon="@drawable/ic_settings_white_36dp"
+              android:title="@string/settings"/>
+
+        <item android:icon="@drawable/ic_help_white_36dp"
+              android:title="@string/help"/>
+
+</menu>

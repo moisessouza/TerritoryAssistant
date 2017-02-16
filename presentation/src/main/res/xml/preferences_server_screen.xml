@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+                  xmlns:preference="http://schemas.android.com/apk/res-auto"
+
+                  android:key="userpref_server_screen_key"
+                  android:title="@string/visible_pref_server_settings">
+        <PreferenceCategory
+                android:title="@string/visible_pref_basic">
+            <Preference
+                    android:title="@string/visible_pref_server_finder"
+                    android:key="@string/userpref_server_finder_key"
+                    android:summary="@string/visible_pref_server_finder_summary"/>
+
+            <ged.mediaplayerremote.presentation.sharedpreferences.IpPreference
+                    android:title="@string/visible_pref_server_ip"
+                    android:key="@string/userpref_custom_ip_key"
+                    android:defaultValue="@string/userpref_custom_ip_default"
+                    preference:removeLeadingZeros="true"/>
+
+            <ged.mediaplayerremote.presentation.sharedpreferences.PortPreference
+                    android:title="@string/visible_pref_custom_port"
+                    android:key="@string/userpref_port_key"
+                    android:defaultValue="@string/userpref_port_default"
+                    preference:removeLeadingZeros="true"/>
+        </PreferenceCategory>
+        <PreferenceCategory
+                android:title="@string/visible_pref_advanced">
+
+            <ged.mediaplayerremote.presentation.sharedpreferences.ConnectionTimeoutPreference
+                    android:title="@string/visible_pref_connection_timeout"
+                    android:key="@string/userpref_connection_timeout_key"
+                    android:defaultValue="@string/userpref_connection_timeout_default"
+                    preference:removeLeadingZeros="true"/>
+        </PreferenceCategory>
+</PreferenceScreen>

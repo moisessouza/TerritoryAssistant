@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout android:layout_height="match_parent"
+                                                 android:layout_width="match_parent"
+
+                                                 xmlns:android="http://schemas.android.com/apk/res/android"
+                                                 xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout android:layout_height="match_parent"
+                    android:layout_width="match_parent">
+
+        <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/file_explorer_location_layout"
+                >
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    >
+
+                <TextView
+                        android:text="@string/file_explorer_current_directory"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView4"
+                        android:layout_centerInParent="false"
+                        android:layout_centerHorizontal="true"
+                        android:textSize="16sp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="12dp"/>
+
+                <TextView
+                        android:text="@string/file_explorer_loading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/file_explorer_location_text"
+                        android:layout_centerInParent="false"
+                        android:textSize="16sp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="12dp"
+                        android:layout_below="@+id/textView4"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="12dp"/>
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <FrameLayout
+                android:layout_width="match_parent"
+                android:background="@android:color/transparent"
+                android:layout_below="@id/file_explorer_location_layout"
+                android:layout_height="3dp">
+            <ProgressBar
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp"
+                    android:id="@+id/file_explorer_loading"
+                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                    android:layout_gravity="top"
+                    android:indeterminate="true"
+
+                    android:layout_marginTop="-3dp"
+                    android:background="@android:color/transparent"
+                    android:visibility="gone"/>
+
+        </FrameLayout>
+
+        <android.support.v7.widget.RecyclerView
+
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:id="@+id/file_explorer_recycler"
+                android:clipToPadding="true"
+                android:layout_below="@+id/file_explorer_location_layout"
+                android:layout_alignParentStart="true">
+        </android.support.v7.widget.RecyclerView>
+
+    </RelativeLayout>
+
+
+    <android.support.design.widget.FloatingActionButton
+            android:id="@+id/file_explorer_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="16dp"
+            android:src="@drawable/ic_refresh_black_36dp"
+            app:layout_anchor="@id/file_explorer_recycler"
+            app:layout_anchorGravity="bottom|right|end" />
+</android.support.design.widget.CoordinatorLayout>

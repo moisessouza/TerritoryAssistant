@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="wrap_content"
+              android:layout_height="match_parent"
+              android:background="#333333"
+              android:orientation="vertical"
+              android:id="@+id/nav_header_view">
+    <RelativeLayout android:id="@+id/layoutSnapshotBig"
+                  android:layout_width="wrap_content"
+                  android:orientation="vertical"
+                  android:layout_height="wrap_content"
+                  android:minHeight="200dp"
+                  android:background="@color/materialBlack"
+                  android:visibility="visible"
+                  android:gravity="center">
+        <ImageView
+                android:id="@+id/snapshotBig"
+                android:scaleType="centerCrop"
+                android:visibility="gone"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"/>
+
+        <TextView
+                android:id="@+id/snapshot_not_available"
+
+                android:text="@string/main_activity_snapshot_unavailable"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/material500"/>
+
+    </RelativeLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:orientation="vertical"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:gravity="left" android:layout_marginLeft="16dp" android:layout_marginTop="16dp">
+
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/filename"
+                android:id="@+id/textView" android:textColor="#FFFFFF" android:textStyle="bold"
+        />
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/navbar_now_playing" android:textColor="#FFFFFF" android:text="----"
+                android:paddingTop="8dp" android:paddingBottom="8dp"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/status_stopped"
+                android:id="@+id/navbar_status" android:textColor="#FFFFFF" android:textStyle="bold"
+                android:paddingBottom="8dp"/>
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:paddingBottom="8dp">
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0:00:00"
+                    android:id="@+id/navbar_progress" android:textColor="#FFFFFF"/>
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" / "
+                    android:id="@+id/textView5" android:textColor="#FFFFFF"/>
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0:00:00"
+                    android:id="@+id/navbar_duration" android:textColor="#FFFFFF"/>
+        </LinearLayout>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/toast_connected_to"
+                android:id="@+id/textView7" android:textColor="#FFFFFF" android:textStyle="bold"
+                android:paddingBottom="8dp"
+                android:visibility="gone"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="----"
+                android:id="@+id/navbar_hostname" android:textColor="#FFFFFF"
+                android:visibility="gone"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="----"
+                android:id="@+id/navbar_serverIP" android:textColor="#FFFFFF"
+                android:visibility="gone"/>
+
+    </LinearLayout>
+    <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:background="@color/mainButtonClicked" android:layout_marginTop="16dp"/>
+</LinearLayout>

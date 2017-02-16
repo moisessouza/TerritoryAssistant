@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:layout_height="fill_parent"
+              android:weightSum="1">
+
+    <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:id="@+id/widget_rewind"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="0.2"
+            android:baselineAlignBottom="false"
+            android:cropToPadding="false"
+            android:longClickable="false"
+            android:src="@drawable/ic_fast_rewind_black_36dp"
+
+            android:background="#00ffffff"/>
+
+    <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:id="@+id/widget_forward"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="0.2"
+            android:baselineAlignBottom="false"
+            android:cropToPadding="false"
+            android:longClickable="false"
+            android:src="@drawable/ic_fast_forward_black_36dp"
+
+            android:background="#00ffffff"/>
+
+    <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:id="@+id/widget_play_pause"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="0.2"
+            android:baselineAlignBottom="false"
+            android:cropToPadding="false"
+            android:longClickable="false"
+            android:src="@drawable/ic_play_arrow_black_36dp"
+            android:background="#00ffffff"/>
+
+    <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:id="@+id/widget_vol_down"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="0.2"
+            android:baselineAlignBottom="false"
+            android:cropToPadding="false"
+            android:longClickable="false"
+            android:src="@drawable/ic_volume_down_black_36dp"
+
+            android:background="#00ffffff"/>
+
+    <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:id="@+id/widget_vol_up"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="0.2"
+            android:baselineAlignBottom="false"
+            android:cropToPadding="false"
+            android:longClickable="false"
+            android:src="@drawable/ic_volume_up_black_36dp"
+
+            android:background="#00ffffff"/>
+
+</LinearLayout>

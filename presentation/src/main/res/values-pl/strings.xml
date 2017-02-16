@@ -1,0 +1,96 @@
+<resources>
+    <string name="action_settings">Settings</string>
+
+    <!-- Nav bar related strings -->
+    <string name="edit_mode_switch">Tryb edycji</string>
+    <string name="file_manager">Przeglądarka plików</string>
+    <string name="settings">Ustawienia</string>
+    <string name="rescan_server">Wyszukaj serwer</string>
+    <string name="help">Pomoc</string>
+
+
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+
+    <string name="prefscreen_im_feeling_lucky">I\'m Feeling Lucky</string>
+    <string name="prefscreen_im_feeling_lucky_summary">Connect to the first server that is found</string>
+
+    <string name="filename">Plik:</string>
+    <string name="status_playing">Odtwarzanie</string>
+    <string name="status_paused">Pauza</string>
+    <string name="status_stopped">Zatrzymany</string>
+    <string name="status_no_file_selected">Nie wybrano pliku</string>
+    <string name="toast_connected_to">Połączono z:</string>
+
+
+    <!--Visible preferences related-->
+
+    <string name="visible_pref_server">Serwer</string>
+    <string name="visible_pref_server_settings">Ustawienia serwera</string>
+    <string name="visible_pref_basic">Podstawowe</string>
+    <string name="visible_pref_server_finder">Skaner serwerów</string>
+    <string name="visible_pref_server_finder_summary">Wyszukaj dostępne serwery w sieci lokalnej</string>
+    <string name="visible_pref_server_ip">IP serwera</string>
+    <string name="visible_pref_custom_port">Port nasłuchu</string>
+    <string name="visible_pref_advanced">Zaawansowane</string>
+    <string name="visible_pref_connection_timeout">Limit czasu połączenia</string>
+    <string name="visible_pref_server_finder_retries">Ilośc prób skanera</string>
+
+    <string name="visible_pref_buttons">Przyciski</string>
+    <string name="visible_pref_volume_jump">Przeskok głośności</string>
+    <string name="visible_pref_time_jump">Przeskok czasu</string>
+    <string name="visible_pref_use_physical_volume_buttons">Używaj fizycznych przycisków głośności</string>
+    <string name="visible_pref_screen">Ekran</string>
+    <string name="visible_pref_keep_screen_on">Nie wyłączaj ekranu</string>
+    <string name="visible_pref_turn_brightness_to_min">Zmniejsz jasnośc ekranu</string>
+    <string name="visible_pref_widget_on_lockscreen">Widget na zablokowanym ekranie</string>
+    <string name="visible_pref_snapshot">Podgląd</string>
+    <string name="visible_pref_display_snapshot">Wyświetlaj podgląd</string>
+    <string name="visible_pref_display_snapshot_summary_off">Włączenie może zwiększyć zużycie baterii</string>
+    <string name="visible_pref_display_snapshot_summary_on">Wyłączenie może zmniejszyć zużycie baterii</string>    <string name="visible_pref_snapshot_update_interval">Odświeżanie podglądu</string>
+    <string name="edit_menu_delete_tab">Usuń kartę</string>
+    <string name="edit_menu_move_left">W lewo</string>
+    <string name="edit_menu_move_right">W prawo</string>
+    <string name="edit_menu_new_tab">Nowa karta</string>
+    <string name="edit_menu_rename_tab">Zmień nazwę</string>
+    <string name="cancel">Anuluj</string>
+    <string name="create_new_tab">Dodaj nową kartę</string>
+    <string name="create">Dodaj</string>
+    <string name="fileName">Nazwa</string>
+    <string name="rename_tab">Zmień nazwę</string>
+    <string name="rename">Ok</string>
+    <string name="connect">Połącz</string>
+    <string name="dialog_confirm_delete_message">"Czy na pewno usunąć "</string>
+    <string name="dialog_confirm_delete_title">Potwierdź usunięcie</string>
+    <string name="dialog_confirm_delete_yes">Tak</string>
+    <string name="dialog_choose_function">Przydziel funkcję:</string>
+    <string name="dialog_choose_server">Znalezione serwery:</string>
+    <string name="toast_no_servers_found">Nie znaleziono serwerów</string>
+    <string name="file_explorer_loading">Wczytywanie...</string>
+    <string name="toast_server_unavailable">Nie można połączyć się z serwerem</string>
+    <string name="name">Nazwa</string>
+    <string name="visible_pref_volume_jump_message">O ile % mają zmieniać głośność przyciski głośności</string>
+    <string name="visible_pref_time_jump_message">O ile sekund mają przeskakiwać przyciski przewijania</string>
+    <string name="visible_pref_snapshot_update_interval_message">Jak często odświeżać podgląd</string>
+    <string name="visible_pref_factory_reset_category">Reset</string>
+    <string name="visible_pref_factory_reset">Przywróć domyślne ustawienia</string>
+    <string name="visible_pref_factory_reset_message">Zostaną przywrócone domyślne ustawienia aplikacji, włączając w to konfigurację przycisków i zakładek. Czy na pewno chcesz kontynuować?</string>
+    <string name="fragment_server_finder_servers_found">Znalezione serwery:</string>
+    <string name="widget_connecting_message">"Przywracanie połączenia: "</string>
+    <string name="widget_connecting_title">MPC Remote: łączenie</string>
+    <string name="widget_disconnected_message">Dotknij, aby wrócić do aplikacji.</string>
+    <string name="widget_disconnected_title">MPC Remote: rozłączono</string>
+    <string name="file_explorer_current_directory">Bieżący folder:</string>
+    <string name="file_explorer_loaded">"Wczytano plik: "</string>
+    <string name="file_explorer_dialog_file_chosen">Wybrano plik:</string>
+    <string name="file_explorer_dialog_load">Wczytaj</string>
+    <string name="file_explorer_dialog_unknown_file_type">Nieznany typ pliku. MPC HC może nie być w stanie go poprawnie odtworzyć.</string>
+    <string name="help_text">Jeżeli MPC Remote nie może połączyć się z serwerem, wykonaj następujące kroki:\n\n1) Upewnij się, że urządzenie Android jest połączone z tą samą siecią Wi-Fi co serwer MPC-HC.\n\n2) Upewnij się, że odtwarzacz MPC-HC jest uruchomiony na serwerze.\n\n3) W odtwarzaczu MPC-HC otwórz okno ustawień (Widok -> Ustawienia lub naciśnij \"O\"). Następnie wejdź w zakładkę Program -> Interfejs internetowy i upewnij się że zaznaczone jest pole \"Port nasłuchu:\" (patrz: zrzut ekranu)\n\n4) Upewnij się że port (domyślnie 13579( jest taki sam jak port ustawiony w aplikacji MPC Remote. Możesz zmienić port w odtwarzaczu MPC-HC lub w ustawieniach aplikacji MPC Remote.\n\n5) Jeżeli chcesz widzieć podgląd, upewnij się że jest włączony w odtwarzaczu MPC-HC (patrz: zrzut ekranu).</string>
+    <string name="visible_pref_about">O programie</string>
+    <string name="visible_pref_about_message">Wersja 1.0\nAutor: Jakub Karczmarski\n\nKontakt: jakub.karczmarski@gmail.com\n\ngithub.com/retroprop</string>
+    <string name="main_activity_snapshot_unavailable">PODGLĄD\nNIEDOSTĘPNY</string>
+
+
+</resources>

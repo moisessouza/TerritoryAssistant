@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="NumberPickerPreference">
+        <attr name="minValue" format="integer|reference"/>
+        <attr name="maxValue" format="integer|reference"/>
+        <attr name="wrapSelectorWheel" format="boolean"/>
+        <attr name="unit" format="string|reference"/>
+        <attr name="message" format="string|reference"/>
+        <attr name="focusable" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="ValidatedEditTextPreference">
+        <attr name="removeLeadingZeros" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="BaseDialogPreference">
+        <attr name="buttonColor" format="color|reference"/>
+        <attr name="negativeButtonDisabled" format="boolean"/>
+    </declare-styleable>
+</resources>
