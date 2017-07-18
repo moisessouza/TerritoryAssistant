@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/menu_marcar"
+        android:title="@string/marcar_registro" />
+    <item android:id="@+id/menu_desmarcar"
+        android:title="@string/desmarcar_registro" />
+    <item android:id="@+id/menu_fechar"
+        android:title="@string/fechar" />
+</menu>

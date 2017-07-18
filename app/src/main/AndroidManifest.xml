@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.application.territoryassistant" >
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/icon"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".dirigentes.DirigentesActivity"
+            android:label="@string/title_activity_dirigentes"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.application.territoryassistant.MainActivity" />
+        </activity>
+        <activity
+            android:name=".dirigentes.NovoDirigenteActivity"
+            android:label="@string/title_activity_novo_dirigente"
+            android:parentActivityName=".dirigentes.DirigentesActivity"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.application.territoryassistant.dirigentes.DirigentesActivity" />
+        </activity>
+        <activity
+            android:name=".dirigentes.EditarDirigenteActivity"
+            android:label="@string/title_activity_editar_dirigente"
+            android:parentActivityName=".dirigentes.DirigentesActivity"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.application.territoryassistant.dirigentes.DirigentesActivity" />
+        </activity>
+        <activity
+            android:name=".territorios.TerritoriosActivity"
+            android:label="@string/title_activity_territorios"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.application.territoryassistant.MainActivity" />
+        </activity>
+        <activity
+            android:name=".territorios.NovoTerritorioActivity"
+            android:label="@string/title_activity_novo_territorio"
+            android:parentActivityName=".territorios.TerritoriosActivity"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.application.territoryassistant.territorios.TerritoriosActivity" />
+        </activity>
+        <activity
+            android:name=".territorios.EditarTerritorioActivity"
+            android:label="@string/title_activity_editar_territorio"
+            android:parentActivityName=".territorios.TerritoriosActivity"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.application.territoryassistant.territorios.TerritoriosActivity" />
+        </activity>
+        <activity
+            android:name=".grupos.GruposActivity"
+            android:label="@string/title_activity_grupos"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.application.territoryassistant.MainActivity" />
+        </activity>
+        <activity
+            android:name=".grupos.NovoGrupoActivity"
+            android:label="@string/title_activity_novo_grupo"
+            android:parentActivityName=".grupos.GruposActivity"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.application.territoryassistant.grupos.GruposActivity" />
+        </activity>
+        <activity
+            android:name=".grupos.EditarGrupoActivity"
+            android:label="@string/title_activity_editar_grupo"
+            android:parentActivityName=".grupos.GruposActivity"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.application.territoryassistant.grupos.GruposActivity" />
+        </activity>
+        <activity
+            android:name=".designar.DesignarActivity"
+            android:label="@string/title_activity_designar"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.application.territoryassistant.MainActivity" />
+        </activity>
+        <activity
+            android:name=".designar.VerDesignadosActivity"
+            android:label="@string/title_activity_ver_designados"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.application.territoryassistant.MainActivity" />
+        </activity>
+        <activity
+            android:name=".designar.FecharDesignacaoActivity"
+            android:label="@string/title_activity_fechar_designacao"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.application.territoryassistant.MainActivity" />
+        </activity>
+        <activity
+            android:name=".sugerir.SugerirActivity"
+            android:label="@string/title_activity_sugerir"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.application.territoryassistant.MainActivity" />
+        </activity>
+        <activity
+            android:name=".historico.HistoricoActivity"
+            android:label="@string/title_activity_historio"
+            android:parentActivityName=".designar.VerDesignadosActivity"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.application.territoryassistant.designar.VerDesignadosActivity" />
+        </activity>
+        <activity
+            android:name=".fototerritorio.FotoTerritorioActivity"
+            android:label="@string/title_activity_foto_territorio"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
+        <activity
+            android:name=".configuracoes.ConfiguracoesActivity"
+            android:label="@string/title_activity_configuracoes"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.application.territoryassistant.MainActivity" />
+        </activity>
+        <activity android:name=".about.AboutActivity" >
+        </activity>
+    </application>
+
+</manifest>

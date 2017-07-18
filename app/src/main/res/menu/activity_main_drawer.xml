@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/nav_dirigentes" android:icon="@android:drawable/ic_menu_camera"
+            android:title="@string/dirigentes" />
+        <item android:id="@+id/nav_grupos" android:icon="@android:drawable/ic_menu_myplaces"
+            android:title="@string/grupos_de_saida" />
+        <item android:id="@+id/nav_territorios" android:icon="@android:drawable/ic_dialog_map"
+            android:title="@string/territorios" />
+    </group>
+
+    <item android:title="@string/funcoes">
+        <menu>
+            <item android:id="@+id/nav_designar_territorios" android:icon="@android:drawable/ic_media_next"
+                android:title="@string/designar_territorios" />
+            <item android:id="@+id/nav_territorios_designados" android:icon="@android:drawable/ic_menu_always_landscape_portrait"
+                android:title="@string/historico" />
+            <item android:id="@+id/nav_sugerir" android:icon="@android:drawable/ic_menu_share"
+                android:title="@string/sugerir_territorios" />
+        </menu>
+    </item>
+
+    <item android:title="@string/ferramentas">
+        <menu>
+            <item android:id="@+id/nav_exportar_dados" android:icon="@android:drawable/ic_menu_set_as"
+                android:title="@string/exportar_dados"/>
+            <item android:id="@+id/nav_importar_dados" android:icon="@android:drawable/ic_input_get"
+                android:title="@string/importar_dados"/>
+        </menu>
+
+    </item>
+
+</menu>

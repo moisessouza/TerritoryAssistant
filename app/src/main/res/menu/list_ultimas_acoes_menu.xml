@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/menu_enviar_mensagem"
+        android:title="@string/enviar_mensagem" />
+    <item android:id="@+id/menu_marcar_registros"
+        android:title="@string/marcar_registros" />
+</menu>

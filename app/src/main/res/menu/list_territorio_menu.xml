@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/menu_designar"
+        android:title="@string/designar" />
+    <item android:id="@+id/menu_ver_vizinhos"
+        android:title="@string/ver_vizinhos" />
+    <item android:id="@+id/menu_editar"
+        android:title="@string/editar" />
+    <item android:id="@+id/menu_historico"
+        android:title="@string/historico" />
+    <item android:id="@+id/menu_deletar"
+          android:title="@string/deletar" />
+</menu>
