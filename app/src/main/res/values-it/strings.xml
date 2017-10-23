@@ -129,4 +129,5 @@
     <string name="editar">Modifica</string>
     <string name="enviar_mensagem">Inviare messaggio</string>
     <string name="marcar_registros">Scrivi registri</string>
+    <string name="OK">OK</string>
 </resources>
