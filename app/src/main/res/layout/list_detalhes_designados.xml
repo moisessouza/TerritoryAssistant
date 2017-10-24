@@ -74,13 +74,16 @@
         android:layout_alignLeft="@+id/txt_dia_semana"
         android:layout_alignStart="@+id/txt_dia_semana" />
 
-    <ImageButton
+    <TextView
+        android:id="@+id/btn_fechar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/btn_fechar"
-        android:src="@android:drawable/ic_input_get"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignBottom="@+id/img_foto_territorio"
-        android:layout_alignParentTop="true" />
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="&#8942;"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"/>
+
+
 </RelativeLayout>
