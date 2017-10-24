@@ -53,7 +53,6 @@
         android:layout_alignParentStart="@+id/lab_ultima_data"
         android:layout_alignStart="@+id/lab_ultima_data"
         android:layout_alignParentBottom="true"
-
         android:layout_alignEnd="@+id/lab_ultima_data" />
 
 </RelativeLayout>
