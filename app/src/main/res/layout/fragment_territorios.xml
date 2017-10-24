@@ -40,7 +40,6 @@
         android:layout_below="@+id/codigos"
         android:layout_toRightOf="@+id/img_foto_territorio"
         android:paddingTop="20dp"
-
         android:layout_alignParentEnd="true" />
 
     <TextView
