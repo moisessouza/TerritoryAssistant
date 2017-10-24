@@ -1,7 +1,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="100dp"
-    android:padding="6dip" >
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="6dip">
 
     <ImageView
         android:layout_width="100dp"
@@ -10,20 +11,21 @@
         android:src="@android:drawable/ic_menu_camera"
         android:background="#80000000"
         android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
+
         android:layout_alignParentStart="true"
-        android:layout_marginRight="5dp" />
+         />
 
     <TextView
         android:id="@+id/codigos"
         android:layout_width="fill_parent"
+        android:paddingStart="8dp"
         android:layout_height="26dip"
         android:ellipsize="marquee"
         android:singleLine="true"
         android:text="Description"
         android:textSize="20sp"
         android:gravity="center_vertical"
-        android:layout_toRightOf="@+id/img_foto_territorio"
+        android:layout_toEndOf="@+id/img_foto_territorio"
         android:layout_alignParentTop="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
@@ -31,24 +33,27 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:paddingStart="8dp"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="@string/ultima_data"
         android:id="@+id/lab_ultima_data"
         android:layout_below="@+id/codigos"
         android:layout_toRightOf="@+id/img_foto_territorio"
         android:paddingTop="20dp"
-        android:layout_alignParentRight="true"
+
         android:layout_alignParentEnd="true" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        app:paddingStart="8dp"
+        android:paddingLeft="8dp"
         android:id="@+id/ultima_data"
         android:layout_below="@+id/lab_ultima_data"
-        android:layout_alignLeft="@+id/lab_ultima_data"
+        android:layout_alignParentStart="@+id/lab_ultima_data"
         android:layout_alignStart="@+id/lab_ultima_data"
         android:layout_alignParentBottom="true"
-        android:layout_alignRight="@+id/lab_ultima_data"
+
         android:layout_alignEnd="@+id/lab_ultima_data" />
 
 </RelativeLayout>

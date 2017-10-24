@@ -87,7 +87,7 @@
     <!-- Frases da aplicacao de xmls -->
     <string name="texto_padrao_dirigente">Pattern text for conductor</string>
     <string name="numero_dias_descanso_territorio">Number of days of rest for territory</string>
-    <string name="dirigente">Conductor</string>
+    <string name="dirigente">Publisher</string>
     <string name="data_inicio_tres_pontos">Start date...</string>
     <string name="designar">Designate</string>
     <string name="nome_dirigente">Conductor’s name</string>

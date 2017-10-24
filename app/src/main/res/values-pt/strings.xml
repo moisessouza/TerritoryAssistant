@@ -1,15 +1,15 @@
 <resources>
-    <string name="app_name">Territory Assistant</string>
+    <string name="app_name">Território</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_settings">Configurações</string>
-    <string name="title_activity_dirigentes">Dirigentes</string>
-    <string name="title_activity_novo_dirigente">Novo Dirigente</string>
+    <string name="title_activity_dirigentes">Publicador</string>
+    <string name="title_activity_novo_dirigente">Novo publicador</string>
 
 <!-- TODO: Remove or change this placeholder text -->
-    <string name="title_activity_editar_dirigente">Editar Dirigente</string>
+    <string name="title_activity_editar_dirigente">Editar publicador</string>
     <string name="title_activity_territorios">Territórios</string>
     <string name="title_activity_novo_territorio">Novo território</string>
     <string name="title_activity_editar_territorio">Editar território</string>
@@ -50,10 +50,10 @@
     <string name="sim">Sim</string>
     <string name="nao">Não</string>
     <string name="OK">OK</string>
-    <string name="dirigente_ja_designado">Este dirigente já foi designado</string>
-    <string name="dirigente_atualizado">Dirigente %1$s atualizado.</string>
+    <string name="dirigente_ja_designado">Este publicador já foi designado</string>
+    <string name="dirigente_atualizado">Publicador %1$s atualizado.</string>
     <string name="nome_obrigatorio">Nome é obrigatório</string>
-    <string name="dirigente_inserido">Dirigente %1$s inserido.</string>
+    <string name="dirigente_inserido">Publicador %1$s inserido.</string>
     <string name="selecione">Selecione...</string>
     <string name="grupo_atualizado">Grupo %1$s atualizado.</string>
     <string name="grupo_associado_territorio">Este grupo já está associado a um território</string>
@@ -69,9 +69,9 @@
     <string name="erro_importar_dados">Erro ao importar os dados</string>
     <string name="dados_exportados">Dados exportados</string>
     <string name="necessario_registrar_grupos">Necessário registrar grupos de saída</string>
-    <string name="necessario_cadastrar_dirigentes_territorios">Necessário cadastrar dirigentes e territórios</string>
+    <string name="necessario_cadastrar_dirigentes_territorios">Necessário cadastrar publicador e territórios</string>
     <string name="designados">Designados</string>
-    <string name="dirigentes">Dirigentes</string>
+    <string name="dirigentes">Publicador</string>
     <string name="ultimas_acoes">Ultimas Ações</string>
     <string name="territorio_inserido">Território %1$s inserido</string>
     <string name="territorio_ja_existe">Território %1$s já existe</string>
@@ -83,16 +83,16 @@
     <string name="territorio_ja_designado">Este território já foi designado</string>
     <string name="territorios_vizinhos">Territórios vizinhos</string>
     <string name="sem_territorios_vizinhos">Não há vizinhos configurados para este território</string>
-    <string name="cadastre_um_dirigente">Cadastre pelo menos um dirigente de campo</string>
+    <string name="cadastre_um_dirigente">Cadastre pelo menos um publicador</string>
     <!-- Frases da aplicacao de xmls -->
-    <string name="texto_padrao_dirigente">Texto padrão para o dirigente</string>
+    <string name="texto_padrao_dirigente">Texto padrão para o publicador</string>
     <string name="numero_dias_descanso_territorio">Número de dias de descanso para o território</string>
-    <string name="dirigente">Dirigente</string>
+    <string name="dirigente">Publicador</string>
     <string name="data_inicio_tres_pontos">Data inicio...</string>
     <string name="designar">Designar</string>
-    <string name="nome_dirigente">Nome do dirigente</string>
-    <string name="email_dirigente">Email do dirigente</string>
-    <string name="gravar">Gravar</string>
+    <string name="nome_dirigente">Nome do publicador</string>
+    <string name="email_dirigente">Email do publicador</string>
+    <string name="gravar">Salvar</string>
     <string name="voltar">Voltar</string>
     <string name="nome_grupo">Nome do grupo</string>
     <string name="codigo_territorio">Código do território</string>
