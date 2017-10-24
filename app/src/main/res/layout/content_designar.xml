@@ -24,7 +24,7 @@
 
     <Spinner
         android:layout_width="wrap_content"
-        android:layout_height="50dip"
+        android:layout_height="50dp"
         android:id="@+id/spinner_dirigente"
         android:layout_below="@+id/lab_dirigente"
         android:layout_alignParentLeft="true"
@@ -57,8 +57,9 @@
         android:layout_alignParentEnd="true" />
 
     <Spinner
-        android:layout_width="wrap_content"
-        android:layout_height="50dip"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:spinnerMode="dropdown"
         android:id="@+id/spinner_oferta_revista"
         android:layout_below="@+id/txt_data_inicio"
         android:layout_alignParentLeft="true"
