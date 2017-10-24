@@ -4,8 +4,6 @@ import android.app.DatePickerDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -23,7 +21,6 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.application.territoryassistant.MainActivity;
 import com.application.territoryassistant.R;
@@ -34,11 +31,7 @@ import com.application.territoryassistant.bd.TerritorioDBHelper;
 import com.application.territoryassistant.bd.UltimaAcoesDBHelper;
 import com.application.territoryassistant.designar.vo.DesignacaoVO;
 import com.application.territoryassistant.dirigentes.vo.DirigentesVO;
-import com.application.territoryassistant.grupos.vo.GrupoVO;
-import com.application.territoryassistant.helper.FotoHelper;
 import com.application.territoryassistant.helper.ToastHelper;
-import com.application.territoryassistant.manager.FotoManager;
-import com.application.territoryassistant.territorios.TerritoriosActivity;
 import com.application.territoryassistant.territorios.vo.TerritorioVO;
 
 import java.text.DateFormat;
@@ -57,8 +50,8 @@ public class DesignarActivity extends AppCompatActivity {
     private TerritorioDBHelper dbTerritorio = new TerritorioDBHelper(this);
     private UltimaAcoesDBHelper dbUltimaAcoes = new UltimaAcoesDBHelper(this);
 
-    public String OFERTA;
-    public String REVISTA;
+    public String type1;
+    public String type2;
 
     private List<DirigentesVO> dirigentesVOs = new ArrayList<>();
 
@@ -71,8 +64,8 @@ public class DesignarActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        OFERTA = getString(R.string.oferta);
-        REVISTA = getString(R.string.revista);
+        type1 = getString(R.string.type1);
+        type2 = getString(R.string.type2);
 
         setContentView(R.layout.activity_designar);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -199,8 +192,8 @@ public class DesignarActivity extends AppCompatActivity {
         });
 
         List<String> ofertaRevista = new ArrayList<>();
-        ofertaRevista.add(OFERTA);
-        ofertaRevista.add(REVISTA);
+        ofertaRevista.add(type1);
+        ofertaRevista.add(type2);
 
         spinner = (Spinner)findViewById(R.id.spinner_oferta_revista);
         ArrayAdapter<String> stringAdapter = new ArrayAdapter<String>(this,
@@ -257,10 +250,10 @@ public class DesignarActivity extends AppCompatActivity {
                     String result = (String)s.getSelectedItem();
                     String tipo;
 
-                    if(OFERTA.equals(result)){
-                        tipo = "O";
+                    if(type1.equals(result)){
+                        tipo = "M";
                     } else {
-                        tipo = "R";
+                        tipo = "T";
                     }
 
                     s = (Spinner)findViewById(R.id.spinner_dirigente);

@@ -33,8 +33,6 @@
     <string name="designacao">Designação</string>
     <string name="data_inicio">Data inicio</string>
     <string name="devolucao">Devolução</string>
-    <string name="oferta">Oferta</string>
-    <string name="revista">Revista</string>
     <string name="data_fim">Data fim</string>
     <string name="registros_marcados_aba_designados">Os registros foram marcados na aba Designados.</string>
     <string name="territorio_devolvido">Território devolvido</string>
@@ -130,4 +128,6 @@
     <string name="editar">Editar</string>
     <string name="enviar_mensagem">Enviar mensagem</string>
     <string name="marcar_registros">Marcar registros</string>
+    <string name="type1">Manhã</string>
+    <string name="type2">Tarde</string>
 </resources>

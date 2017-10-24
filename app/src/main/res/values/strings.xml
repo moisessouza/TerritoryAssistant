@@ -33,8 +33,8 @@
     <string name="designacao">Designations</string>
     <string name="data_inicio">Start date</string>
     <string name="devolucao">Restitution</string>
-    <string name="oferta">Offer</string>
-    <string name="revista">Magazine</string>
+
+
     <string name="data_fim">End date</string>
     <string name="registros_marcados_aba_designados">The records were marked on the Designate tab.</string>
     <string name="territorio_devolvido">Territory returned</string>
@@ -130,4 +130,7 @@
     <string name="editar">Edit</string>
     <string name="enviar_mensagem">Send mensage</string>
     <string name="marcar_registros">Mark records</string>
+
+    <string name="type1">Morning</string>
+    <string name="type2">Afternoon</string>
 </resources>
