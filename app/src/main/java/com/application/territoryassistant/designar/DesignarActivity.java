@@ -167,7 +167,7 @@ public class DesignarActivity extends AppCompatActivity {
 
                         int day = c.get(Calendar.DAY_OF_WEEK);
 
-                        Spinner s = (Spinner)findViewById(R.id.spinner_oferta_revista);
+                        Spinner s = (Spinner)findViewById(R.id.spinner_type);
                         if (day != 7){
                             s.setSelection(0);
                         } else {
@@ -195,7 +195,7 @@ public class DesignarActivity extends AppCompatActivity {
         ofertaRevista.add(type1);
         ofertaRevista.add(type2);
 
-        spinner = (Spinner)findViewById(R.id.spinner_oferta_revista);
+        spinner = (Spinner)findViewById(R.id.spinner_type);
         ArrayAdapter<String> stringAdapter = new ArrayAdapter<String>(this,
                 android.R.layout.simple_spinner_item, ofertaRevista);
         spinner.setAdapter(stringAdapter);
@@ -245,7 +245,7 @@ public class DesignarActivity extends AppCompatActivity {
 
                     List<DesignacaoVO> designacaoVOs = new ArrayList<DesignacaoVO>();
 
-                    Spinner s = (Spinner)findViewById(R.id.spinner_oferta_revista);
+                    Spinner s = (Spinner)findViewById(R.id.spinner_type);
 
                     String result = (String)s.getSelectedItem();
                     String tipo;

@@ -34,7 +34,7 @@ public class DirigenteDBHelper extends DBHelper {
     public List<DirigentesVO> buscarDirigentes() {
 
         SQLiteDatabase db = this.getWritableDatabase();
-        Cursor cursor = db.query(true, TAB_DIRIGENTES, new String[]{"ID", "NOME", "EMAIL"}, null, null, null, null, null, null);
+        Cursor cursor = db.query(true, TAB_DIRIGENTES, new String[]{"ID", "NOME", "EMAIL"}, null, null, null, null, "NOME"+ " ASC", null);
 
         List<DirigentesVO> dirigentes = new ArrayList<DirigentesVO>();
 
