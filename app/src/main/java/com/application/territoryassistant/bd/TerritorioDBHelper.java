@@ -109,7 +109,7 @@ public class TerritorioDBHelper extends DBHelper {
             args.add(idGrupo.toString());
         }
 
-        String orderBy = null;
+        String orderBy = "COD"+ " ASC";
         if (ordenarData){
             orderBy = "ULTIMA_DATA_FIM";
         }
@@ -166,7 +166,7 @@ public class TerritorioDBHelper extends DBHelper {
 
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.query(true, TAB_TERRITORIO, new String[]{"ID", "COD", "ID_GRUPO", "OBSERVACOES", "FOTO_PATH", "SUSPENSO", "ULTIMA_DATA_FIM"}, selection.toString(),
-                args.toArray(new String[]{}), null, null, null, null);
+                args.toArray(new String[]{}), null, null, "COD"+ " ASC", null);
 
         List<TerritorioVO> territorioVOs = new ArrayList<>();
 
@@ -221,7 +221,7 @@ public class TerritorioDBHelper extends DBHelper {
 
         }
 
-        Cursor cursor = db.query(true, TAB_TERRITORIO, new String[]{"ID", "COD", "ID_GRUPO", "FOTO_PATH", "SUSPENSO", "ULTIMA_DATA_FIM"}, selection, args.toArray(new String[]{}), null, null, null, null);
+        Cursor cursor = db.query(true, TAB_TERRITORIO, new String[]{"ID", "COD", "ID_GRUPO", "FOTO_PATH", "SUSPENSO", "ULTIMA_DATA_FIM"}, selection, args.toArray(new String[]{}), null, null, "COD"+ " ASC", null);
 
         TerritorioVO territorioVO = null;
 
@@ -245,7 +245,7 @@ public class TerritorioDBHelper extends DBHelper {
         SQLiteDatabase db = this.getWritableDatabase();
 
         //query (boolean distinct, String table, String[] columns, String selection, String[] selectionArgs, String groupBy, String having, String orderBy, String limit)
-        Cursor cursor = db.query(true, TAB_TERRITORIO, new String[]{"ID", "COD", "ID_GRUPO",  "OBSERVACOES", "FOTO_PATH", "SUSPENSO", "ULTIMA_DATA_FIM"}, "ID=?", new String[] {id.toString()}, null, null, null, null);
+        Cursor cursor = db.query(true, TAB_TERRITORIO, new String[]{"ID", "COD", "ID_GRUPO",  "OBSERVACOES", "FOTO_PATH", "SUSPENSO", "ULTIMA_DATA_FIM"}, "ID=?", new String[] {id.toString()}, null, null, "COD"+ " ASC", null);
 
         TerritorioVO vo = null;
 
@@ -341,7 +341,7 @@ public class TerritorioDBHelper extends DBHelper {
 
         SQLiteDatabase db = this.getWritableDatabase();
 
-        Cursor cursor = db.query(true, TAB_TERRITORIO_VIZINHO, new String[]{"ID", "ID_TERRITORIO", "ID_VIZINHO"}, "ID_TERRITORIO=?", new String[] { idTerritorio.toString()} , null, null, null, null);
+        Cursor cursor = db.query(true, TAB_TERRITORIO_VIZINHO, new String[]{"ID", "ID_TERRITORIO", "ID_VIZINHO"}, "ID_TERRITORIO=?", new String[] { idTerritorio.toString()} , null, null, "COD"+ " ASC", null);
 
         List<TerritorioVizinhoVO> territorioVizinhoVOs = new ArrayList<>();
 
@@ -387,7 +387,7 @@ public class TerritorioDBHelper extends DBHelper {
 
         }
 
-        Cursor cursor = db.query(true, TAB_TERRITORIO, new String[]{"ID", "COD", "ID_GRUPO", "FOTO_PATH", "SUSPENSO", "ULTIMA_DATA_FIM"}, selection, args, null, null, null, null);
+        Cursor cursor = db.query(true, TAB_TERRITORIO, new String[]{"ID", "COD", "ID_GRUPO", "FOTO_PATH", "SUSPENSO", "ULTIMA_DATA_FIM"}, selection, args, null, null, "COD"+ " ASC", null);
 
         List<TerritorioVO> territorioVOs = new ArrayList<TerritorioVO>();
 
