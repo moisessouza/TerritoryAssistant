@@ -8,7 +8,7 @@
     <string name="title_activity_dirigentes">Conductors</string>
     <string name="title_activity_novo_dirigente">New Conductor</string>
 
-<!-- TODO: Remove or change this placeholder text -->
+    <!-- TODO: Remove or change this placeholder text -->
     <string name="title_activity_editar_dirigente">Edit Conductor</string>
     <string name="title_activity_territorios">Territories</string>
     <string name="title_activity_novo_territorio">New territory</string>
@@ -133,4 +133,30 @@
 
     <string name="type1">Morning</string>
     <string name="type2">Afternoon</string>
+
+
+    <string name="about2"><![CDATA[
+<html>
+ <head></head>
+ <body style="text-align:justify;color:gray;background-color:black;">
+  Aplicativo destinado à gerência de territórios para pregação. É destinado ao servo de territórios.
+Principais finalidades:
+
+Designação de territórios;
+Histórico para posteriores consultas;
+Opção para sugestão de territórios a serem trabalhados;
+Territórios próximos (configure os territórios vizinhos);
+É possível fazer backups dos dados;
+Módulo separado para transferir os dados para um arquivo PDF
+
+
+Esse aplicativo NÃO dispensa o uso do formulário S-13
+
+Módulo para converter os dados em arquivo PDF:
+https://drive.google.com/file/d/0B93WFEtl7HpScUl4ZjJSdEhjVms/view?usp=sharing
+ </body>
+</html>
+]]>
+</string>
+
 </resources>
