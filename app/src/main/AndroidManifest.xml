@@ -154,7 +154,7 @@
         <activity
             android:name=".fototerritorio.FotoTerritorioActivity"
             android:label="@string/title_activity_foto_territorio"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".configuracoes.ConfiguracoesActivity"
             android:label="@string/title_activity_configuracoes"
@@ -164,14 +164,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.application.territoryassistant.MainActivity" />
         </activity>
-        <activity android:name=".about.AboutActivity"></activity>
-        <activity android:name=".about2">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity android:name=".about.AboutActivity" />
     </application>
 
 </manifest>
