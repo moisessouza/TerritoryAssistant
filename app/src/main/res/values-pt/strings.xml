@@ -1,12 +1,12 @@
 <resources>
-    <string name="app_name">Territory Assistant</string>
+    <string name="app_name">Território</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_settings">Configurações</string>
     <string name="title_activity_dirigentes">Publicador</string>
-    <string name="title_activity_novo_dirigente">Novo Publicador</string>
+    <string name="title_activity_novo_dirigente">Novo publicador</string>
 
 <!-- TODO: Remove or change this placeholder text -->
     <string name="title_activity_editar_dirigente">Editar publicador</string>
@@ -33,8 +33,6 @@
     <string name="designacao">Designação</string>
     <string name="data_inicio">Data inicio</string>
     <string name="devolucao">Devolução</string>
-    <string name="oferta">Oferta</string>
-    <string name="revista">Revista</string>
     <string name="data_fim">Data fim</string>
     <string name="registros_marcados_aba_designados">Os registros foram marcados na aba Designados.</string>
     <string name="territorio_devolvido">Território devolvido</string>
@@ -69,7 +67,7 @@
     <string name="erro_importar_dados">Erro ao importar os dados</string>
     <string name="dados_exportados">Dados exportados</string>
     <string name="necessario_registrar_grupos">Necessário registrar grupos de saída</string>
-    <string name="necessario_cadastrar_dirigentes_territorios">Necessário cadastrar publicadores e territórios</string>
+    <string name="necessario_cadastrar_dirigentes_territorios">Necessário cadastrar publicador e territórios</string>
     <string name="designados">Designados</string>
     <string name="dirigentes">Publicador</string>
     <string name="ultimas_acoes">Ultimas Ações</string>
@@ -92,7 +90,7 @@
     <string name="designar">Designar</string>
     <string name="nome_dirigente">Nome do publicador</string>
     <string name="email_dirigente">Email do publicador</string>
-    <string name="gravar">Gravar</string>
+    <string name="gravar">Salvar</string>
     <string name="voltar">Voltar</string>
     <string name="nome_grupo">Nome do grupo</string>
     <string name="codigo_territorio">Código do território</string>
@@ -130,4 +128,6 @@
     <string name="editar">Editar</string>
     <string name="enviar_mensagem">Enviar mensagem</string>
     <string name="marcar_registros">Marcar registros</string>
+    <string name="type1">Manhã</string>
+    <string name="type2">Tarde</string>
 </resources>

@@ -24,7 +24,7 @@
 
     <Spinner
         android:layout_width="wrap_content"
-        android:layout_height="50dip"
+        android:layout_height="50dp"
         android:id="@+id/spinner_dirigente"
         android:layout_below="@+id/lab_dirigente"
         android:layout_alignParentLeft="true"
@@ -50,16 +50,19 @@
     <ImageView
         android:id="@+id/img_data_inicio"
         android:layout_width="wrap_content"
+        android:paddingLeft="200dp"
+
         android:layout_height="wrap_content"
-        android:src="@android:drawable/ic_menu_month"
+        android:src="@drawable/ic_date_range_black_24dp"
         android:layout_alignBottom="@+id/txt_data_inicio"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
 
     <Spinner
-        android:layout_width="wrap_content"
-        android:layout_height="50dip"
-        android:id="@+id/spinner_oferta_revista"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:spinnerMode="dropdown"
+        android:id="@+id/spinner_type"
         android:layout_below="@+id/txt_data_inicio"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
@@ -72,7 +75,7 @@
         android:layout_height="wrap_content"
         android:text="@string/selecionar_territorios"
         android:id="@+id/btn_selecionar_territorios"
-        android:layout_below="@+id/spinner_oferta_revista"
+        android:layout_below="@+id/spinner_type"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentRight="true"

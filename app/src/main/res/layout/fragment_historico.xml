@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
     <TextView
         android:layout_width="wrap_content"
@@ -9,9 +10,9 @@
         android:text="@string/codigo_territorio"
         android:id="@+id/txt_cod_territorio"
         android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
+
         android:layout_alignParentStart="true"
-        android:layout_alignParentRight="true"
+
         android:layout_alignParentEnd="true"
         android:gravity="center_vertical|center_horizontal"
         android:background="@color/secondary_text"
@@ -21,7 +22,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/list_historico"
-        android:layout_alignParentRight="true"
+
         android:layout_alignParentEnd="true"
         android:layout_below="@+id/txt_cod_territorio">
     </ListView>

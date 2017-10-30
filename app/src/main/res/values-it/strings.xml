@@ -33,8 +33,6 @@
     <string name="designacao">Assegnazioni</string>
     <string name="data_inicio">Data inizio</string>
     <string name="devolucao">Restituzione</string>
-    <string name="oferta">Offerta</string>
-    <string name="revista">Rivista</string>
     <string name="data_fim">Data fine</string>
     <string name="registros_marcados_aba_designados">I dati sono stati scritti nella tab Assegnati.</string>
     <string name="territorio_devolvido">Territorio Restituito</string>
@@ -130,4 +128,6 @@
     <string name="enviar_mensagem">Inviare messaggio</string>
     <string name="marcar_registros">Scrivi registri</string>
     <string name="OK">OK</string>
+    <string name="type2">Pomeriggio</string>
+    <string name="type1">Mattina</string>
 </resources>

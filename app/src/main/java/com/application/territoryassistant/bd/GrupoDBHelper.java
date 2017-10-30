@@ -33,7 +33,7 @@ public class GrupoDBHelper extends DBHelper {
     public List<GrupoVO> buscarGrupos() {
 
         SQLiteDatabase db = this.getWritableDatabase();
-        Cursor cursor = db.query(true, TAB_GRUPO, new String[]{"ID", "NOME"}, null, null, null, null, null, null);
+        Cursor cursor = db.query(true, TAB_GRUPO, new String[]{"ID", "NOME"}, null, null, null, null, "NOME"+ " ASC", null);
 
         List<GrupoVO> grupoVOs = new ArrayList<GrupoVO>();
 
@@ -60,7 +60,7 @@ public class GrupoDBHelper extends DBHelper {
         SQLiteDatabase db = this.getWritableDatabase();
 
         //query (boolean distinct, String table, String[] columns, String selection, String[] selectionArgs, String groupBy, String having, String orderBy, String limit)
-        Cursor cursor = db.query(true, TAB_GRUPO, new String[]{"ID", "NOME"}, "ID=?", new String[] {id.toString()}, null, null, null, null);
+        Cursor cursor = db.query(true, TAB_GRUPO, new String[]{"ID", "NOME"}, "ID=?", new String[] {id.toString()}, null, null, "NOME"+ " ASC", null);
 
         GrupoVO vo = null;
 

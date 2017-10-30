@@ -3,42 +3,29 @@ package com.application.territoryassistant.historico;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Bundle;
-import android.support.design.widget.NavigationView;
-import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.text.Editable;
-import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.PopupMenu;
 import android.widget.TextView;
 
 import com.application.territoryassistant.R;
-import com.application.territoryassistant.adapter.DetalhesDesignadosArrayAdapter;
-import com.application.territoryassistant.adapter.DetalhesDirigentesArrayAdapter;
-import com.application.territoryassistant.adapter.DetalhesUltimaAcoesArrayAdapter;
 import com.application.territoryassistant.bd.DesignacaoDBHelper;
-import com.application.territoryassistant.bd.DirigenteDBHelper;
 import com.application.territoryassistant.bd.TerritorioDBHelper;
-import com.application.territoryassistant.bd.UltimaAcoesDBHelper;
 import com.application.territoryassistant.designar.vo.DesignacaoVO;
-import com.application.territoryassistant.dirigentes.vo.DirigentesVO;
 import com.application.territoryassistant.territorios.vo.TerritorioVO;
 
 import java.text.DateFormat;
-import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
@@ -204,10 +191,10 @@ public class HistoricoActivity extends AppCompatActivity  {
 
             String tipoStr = designacaoVO.getTipo();
 
-            if ("O".equals(tipoStr)){
-                tipoStr = getContext().getString(R.string.oferta);
+            if ("M".equals(tipoStr)){
+                tipoStr = getContext().getString(R.string.type1);
             } else {
-                tipoStr = getContext().getString(R.string.revista);
+                tipoStr = getContext().getString(R.string.type2);
             }
 
             tipo.setText(tipoStr);
