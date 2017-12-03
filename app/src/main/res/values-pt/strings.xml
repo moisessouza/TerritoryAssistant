@@ -5,11 +5,10 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_settings">Configurações</string>
-    <string name="title_activity_dirigentes">Dirigentes</string>
-    <string name="title_activity_novo_dirigente">Novo Dirigente</string>
+    <string name="title_activity_novo_dirigente">Novo publicador</string>
 
 <!-- TODO: Remove or change this placeholder text -->
-    <string name="title_activity_editar_dirigente">Editar Dirigente</string>
+    <string name="title_activity_editar_dirigente">Editar publicador</string>
     <string name="title_activity_territorios">Territórios</string>
     <string name="title_activity_novo_territorio">Novo território</string>
     <string name="title_activity_editar_territorio">Editar território</string>
@@ -28,10 +27,10 @@
     <!-- Frases da aplicação de arquivos java -->
     <string name="codigos">Códigos</string>
     <string name="codigo">Código</string>
-    <string name="enviar_dados_para">Enviar dados para...</string>
+    <string name="enviar_dados_para">Enviar dados para…</string>
     <string name="observacoes">Observações</string>
     <string name="designacao">Designação</string>
-    <string name="data_inicio">Data inicio</string>
+    <string name="data_inicio">Data início</string>
     <string name="devolucao">Devolução</string>
     <string name="oferta">Oferta</string>
     <string name="revista">Revista</string>
@@ -39,22 +38,22 @@
     <string name="registros_marcados_aba_designados">Os registros foram marcados na aba Designados.</string>
     <string name="territorio_devolvido">Território devolvido</string>
     <string name="territorios_designados_data">Territórios designados para a data</string>
-    <string name="verificar_territorios_estao_irmao">Olá irmão, teria como verificar se os seguintes territórios ainda estão com o irmão?</string>
+    <string name="verificar_territorios_estao_irmao">Olá, teria como verificar se os seguintes territórios ainda estão com o irmão(ã)?</string>
     <string name="configuracoes_salvas">Configurações salvas</string>
     <string name="selecionar_territorios">Selecionar territórios</string>
-    <string name="preencha_data_inicio">Preencha data de inicio</string>
+    <string name="preencha_data_inicio">Preencha data de início</string>
     <string name="selecione_territorios">Selecione os territórios</string>
     <string name="preencha_data_fim">Preencha data fim</string>
-    <string name="data_fim_maior_igual_data_inicio">Data fim deve ser maior ou igual a data inicio</string>
+    <string name="data_fim_maior_igual_data_inicio">Data fim deve ser maior ou igual a data início</string>
     <string name="tem_certeza_deletar_designacao">Tem certeza que deseja deletar essa designação?</string>
     <string name="sim">Sim</string>
     <string name="nao">Não</string>
     <string name="OK">OK</string>
-    <string name="dirigente_ja_designado">Este dirigente já foi designado</string>
-    <string name="dirigente_atualizado">Dirigente %1$s atualizado.</string>
+    <string name="dirigente_ja_designado">Este publicador já foi designado</string>
+    <string name="dirigente_atualizado">Publicador %1$s atualizado.</string>
     <string name="nome_obrigatorio">Nome é obrigatório</string>
-    <string name="dirigente_inserido">Dirigente %1$s inserido.</string>
-    <string name="selecione">Selecione...</string>
+    <string name="dirigente_inserido">Publicador %1$s inserido.</string>
+    <string name="selecione">Selecione…</string>
     <string name="grupo_atualizado">Grupo %1$s atualizado.</string>
     <string name="grupo_associado_territorio">Este grupo já está associado a um território</string>
     <string name="grupo_inserido">Grupo %1$s inserido.</string>
@@ -69,9 +68,9 @@
     <string name="erro_importar_dados">Erro ao importar os dados</string>
     <string name="dados_exportados">Dados exportados</string>
     <string name="necessario_registrar_grupos">Necessário registrar grupos de saída</string>
-    <string name="necessario_cadastrar_dirigentes_territorios">Necessário cadastrar dirigentes e territórios</string>
+    <string name="necessario_cadastrar_dirigentes_territorios">Necessário cadastrar publicadores e territórios</string>
     <string name="designados">Designados</string>
-    <string name="dirigentes">Dirigentes</string>
+    <string name="dirigentes">Publicadores</string>
     <string name="ultimas_acoes">Ultimas Ações</string>
     <string name="territorio_inserido">Território %1$s inserido</string>
     <string name="territorio_ja_existe">Território %1$s já existe</string>
@@ -83,16 +82,16 @@
     <string name="territorio_ja_designado">Este território já foi designado</string>
     <string name="territorios_vizinhos">Territórios vizinhos</string>
     <string name="sem_territorios_vizinhos">Não há vizinhos configurados para este território</string>
-    <string name="cadastre_um_dirigente">Cadastre pelo menos um dirigente de campo</string>
+    <string name="cadastre_um_dirigente">Cadastre pelo menos um publicador</string>
     <!-- Frases da aplicacao de xmls -->
-    <string name="texto_padrao_dirigente">Texto padrão para o dirigente</string>
+    <string name="texto_padrao_dirigente">Texto padrão para o publicador</string>
     <string name="numero_dias_descanso_territorio">Número de dias de descanso para o território</string>
-    <string name="dirigente">Dirigente</string>
-    <string name="data_inicio_tres_pontos">Data inicio...</string>
+    <string name="dirigente">Publicador</string>
+    <string name="data_inicio_tres_pontos">Data início…</string>
     <string name="designar">Designar</string>
-    <string name="nome_dirigente">Nome do dirigente</string>
-    <string name="email_dirigente">Email do dirigente</string>
-    <string name="gravar">Gravar</string>
+    <string name="nome_dirigente">Nome do publicador</string>
+    <string name="email_dirigente">Email</string>
+    <string name="gravar">Salvar</string>
     <string name="voltar">Voltar</string>
     <string name="nome_grupo">Nome do grupo</string>
     <string name="codigo_territorio">Código do território</string>
@@ -100,7 +99,7 @@
     <string name="deletar">Deletar</string>
     <string name="grupo">Grupo</string>
     <string name="suspenso">Suspenso</string>
-    <string name="enter_adicionar_linhas">Aperte enter para adicionar linhas...</string>
+    <string name="enter_adicionar_linhas">Aperte enter para adicionar linhas…</string>
     <string name="selecionar_vizinhos">Selecionar vizinhos</string>
     <string name="numero_de_territorios">Número de territórios</string>
     <string name="somente_vizinhos">Somente territórios vizinhos</string>
@@ -110,9 +109,9 @@
     <string name="ordenar_por_data">Ordernar por data</string>
     <string name="somente_nao_designados">Somente não designados</string>
     <string name="ultima_data">Última data:</string>
-    <string name="digite_codigo_territorio">Digite codigo do território...</string>
-    <string name="selecione_abaixo_para_fechar">Selecione abaixo para fechar...</string>
-    <string name="selecione_enviar_mensagem">Selecione para enviar mensagem...</string>
+    <string name="digite_codigo_territorio">Digite codigo do território…</string>
+    <string name="selecione_abaixo_para_fechar">Selecione abaixo para fechar…</string>
+    <string name="selecione_enviar_mensagem">Selecione para enviar mensagem…</string>
     <string name="nao_ha_designacao_aberto">Não há nenhuma designação em aberto. Para designar um território, abra o menu no canto superior esquedo de sua tela.</string>
     <string name="territorios">Territórios</string>
     <string name="acao">Ação</string>
@@ -130,4 +129,5 @@
     <string name="editar">Editar</string>
     <string name="enviar_mensagem">Enviar mensagem</string>
     <string name="marcar_registros">Marcar registros</string>
+    <string name="title_activity_dirigentes">Publicador</string>
 </resources>
