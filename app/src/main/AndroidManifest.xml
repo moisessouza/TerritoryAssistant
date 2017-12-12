@@ -164,7 +164,10 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.application.territoryassistant.MainActivity" />
         </activity>
-        <activity android:name=".about.AboutActivity" />
+        <activity android:name=".about.AboutActivity"
+            android:label="@string/label_about"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
     </application>
 
 </manifest>
