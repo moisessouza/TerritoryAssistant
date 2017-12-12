@@ -135,8 +135,8 @@
     <string name="type2">Afternoon</string>
 
 
-    <string name="text_about">Aplicativo destinado à gerência de territórios para pregação. É destinado ao servo de territórios. \nPrincipais finalidades: \n- Designação de territórios;\n- Histórico para posteriores consultas;\n- Opção para sugestão de territórios a serem trabalhados; \n- Territórios próximos (configure os territórios vizinhos); \n- É possível fazer backups dos dados; \n- Módulo separado para transferir os dados para um arquivo PDF. \n\nEsse aplicativo NÃO dispensa o uso do formulário S-13.\nMódulo para converter os dados em arquivo PDF: \n\nhttps://drive.google.com/file/d/0B93WFEtl7HpScUl4ZjJSdEhjVms/view?usp=sharing</string>
-    <string name="text_developer">Developer: Moisés de Souza\\nEdited for: Charllys Fernandes\\nTranlate to italian: Francesco Sabatini</string>
+    <string name="text_about">Aplicativo destinado à gerência de territórios para pregação. É destinado ao servo de territórios. \nPrincipais finalidades: \n- Designação de territórios;\n- Histórico para posteriores consultas;\n- Opção para sugestão de territórios a serem trabalhados; \n- Territórios próximos (configure os territórios vizinhos); \n- É possível fazer backups dos dados; \n\n- Módulo separado para transferir os dados para um arquivo PDF:\nhttps://drive.google.com/file/d/0B93WFEtl7HpScUl4ZjJSdEhjVms/view?usp=sharing\n\nEsse aplicativo NÃO dispensa o uso do formulário S-13.\n</string>
+    <string name="text_developer">Developer: Moisés de Souza\nEdited for: Charllys Fernandes\nTranlate to italian: Francesco Sabatini</string>
     <string name="label_about">About</string>
 
 </resources>

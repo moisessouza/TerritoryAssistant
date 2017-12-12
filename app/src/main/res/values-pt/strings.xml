@@ -130,7 +130,7 @@
     <string name="marcar_registros">Marcar registros</string>
     <string name="type1">Manhã</string>
     <string name="type2">Tarde</string>
-    <string name="text_about">"Aplicativo destinado à gerência de territórios para pregação. É destinado ao servo de territórios. \nPrincipais finalidades: \n- Designação de territórios;\n- Histórico para posteriores consultas;\n- Opção para sugestão de territórios a serem trabalhados; \n- Territórios próximos (configure os territórios vizinhos); \n- É possível fazer backups dos dados; \n- Módulo separado para transferir os dados para um arquivo PDF. \n\nEsse aplicativo NÃO dispensa o uso do formulário S-13.\nMódulo para converter os dados em arquivo PDF: "</string>
-    <string name="text_developer">Desenvolvido por: Moisés de Souza\\nEditado por: Charllys Fernandes\\nTraduzido para o italiano por: Francesco Sabatini</string>
+    <string name="text_about">Aplicativo destinado à gerência de territórios para pregação. É destinado ao servo de territórios. \nPrincipais finalidades: \n- Designação de territórios;\n- Histórico para posteriores consultas;\n- Opção para sugestão de territórios a serem trabalhados; \n- Territórios próximos (configure os territórios vizinhos); \n- É possível fazer backups dos dados; \n\n- Módulo separado para transferir os dados para um arquivo PDF:\nhttps://drive.google.com/file/d/0B93WFEtl7HpScUl4ZjJSdEhjVms/view?usp=sharing\n</string>
+    <string name="text_developer">Desenvolvido por: Moisés de Souza\nEditado por: Charllys Fernandes\nTraduzido para o italiano por: Francesco Sabatini</string>
     <string name="label_about">Sobre o App</string>
 </resources>

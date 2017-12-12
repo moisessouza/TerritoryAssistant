@@ -6,6 +6,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:elevation="4dp"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="@string/codigo_territorio"
         android:id="@+id/txt_cod_territorio"
