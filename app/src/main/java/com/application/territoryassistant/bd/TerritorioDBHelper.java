@@ -341,7 +341,7 @@ public class TerritorioDBHelper extends DBHelper {
 
         SQLiteDatabase db = this.getWritableDatabase();
 
-        Cursor cursor = db.query(true, TAB_TERRITORIO_VIZINHO, new String[]{"ID", "ID_TERRITORIO", "ID_VIZINHO"}, "ID_TERRITORIO=?", new String[] { idTerritorio.toString()} , null, null, "COD"+ " ASC", null);
+        Cursor cursor = db.query(true, TAB_TERRITORIO_VIZINHO, new String[]{"ID", "ID_TERRITORIO", "ID_VIZINHO"}, "ID_TERRITORIO=?", new String[] { idTerritorio.toString()} , null, null, null, null);
 
         List<TerritorioVizinhoVO> territorioVizinhoVOs = new ArrayList<>();
 
