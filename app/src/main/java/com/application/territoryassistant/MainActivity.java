@@ -16,16 +16,12 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.text.Editable;
-import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.EditText;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import com.application.territoryassistant.about.AboutActivity;
 import com.application.territoryassistant.adapter.DetalhesDesignadosArrayAdapter;
@@ -421,26 +417,7 @@ public class MainActivity extends AppCompatActivity
 
                 list.setAdapter(new DetalhesDesignadosArrayAdapter(getActivity(), android.R.layout.simple_list_item_1, listaDesignacao));
 
-                EditText filtro = (EditText)rootView.findViewById(R.id.txt_filtro);
 
-
-                filtro.addTextChangedListener(new TextWatcher() {
-                    @Override
-                    public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-                    }
-
-                    @Override
-                    public void onTextChanged(CharSequence s, int start, int before, int count) {
-                        List<DesignacaoVO> listaDesignacao = dbDesignacao.buscarDesignacoesTerritorioAberto(s.toString(), true);
-                        list.setAdapter(new DetalhesDesignadosArrayAdapter(getActivity(), android.R.layout.simple_list_item_1, listaDesignacao));
-                    }
-
-                    @Override
-                    public void afterTextChanged(Editable s) {
-
-                    }
-                });
 
             } else {
                 rootView = inflater.inflate(R.layout.fragment_detalhes_sem_designados, container, false);

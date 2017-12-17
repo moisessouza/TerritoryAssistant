@@ -30,9 +30,11 @@
 
     <include layout="@layout/content_territorios" />
 
-    <android.support.design.widget.FloatingActionButton android:id="@+id/fab_territorios"
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_territorios"
+        android:elevation="8dp"
         android:layout_width="wrap_content" android:layout_height="wrap_content"
         android:layout_gravity="bottom|end" android:layout_margin="@dimen/fab_margin"
-        android:src="@android:drawable/ic_input_add" />
+        android:src="@drawable/ic_add" />
 
 </android.support.design.widget.CoordinatorLayout>

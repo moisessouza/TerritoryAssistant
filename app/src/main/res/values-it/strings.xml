@@ -33,8 +33,6 @@
     <string name="designacao">Assegnazioni</string>
     <string name="data_inicio">Data inizio</string>
     <string name="devolucao">Restituzione</string>
-    <string name="oferta">Offerta</string>
-    <string name="revista">Rivista</string>
     <string name="data_fim">Data fine</string>
     <string name="registros_marcados_aba_designados">I dati sono stati scritti nella tab Assegnati.</string>
     <string name="territorio_devolvido">Territorio Restituito</string>
@@ -49,7 +47,6 @@
     <string name="tem_certeza_deletar_designacao">Sei sicuro di cancellare questa assegnazione?</string>
     <string name="sim">Sì</string>
     <string name="nao">No</string>
-    <string name="OK">OK</string>
     <string name="dirigente_ja_designado">Il conduttore è stato designato</string>
     <string name="dirigente_atualizado">Conduttore %1$s aggiornato.</string>
     <string name="nome_obrigatorio">Il nome è obbligatorio</string>
@@ -130,4 +127,10 @@
     <string name="editar">Modifica</string>
     <string name="enviar_mensagem">Inviare messaggio</string>
     <string name="marcar_registros">Scrivi registri</string>
+    <string name="OK">OK</string>
+    <string name="type2">Pomeriggio</string>
+    <string name="type1">Mattina</string>
+    <string name="text_about">Aplicativo destinado à gerência de territórios para pregação. É destinado ao servo de territórios. \nPrincipais finalidades: \n- Designação de territórios;\n- Histórico para posteriores consultas;\n- Opção para sugestão de territórios a serem trabalhados; \n- Territórios próximos (configure os territórios vizinhos); \n- É possível fazer backups dos dados; \n\n- Módulo separado para transferir os dados para um arquivo PDF. \nhttps://drive.google.com/file/d/0B93WFEtl7HpScUl4ZjJSdEhjVms/view?usp=sharing\n\nEsse aplicativo NÃO dispensa o uso do formulário S-13.</string>
+    <string name="text_developer">Developer: Moisés de Souza\nEdited for: Charllys Fernandes\nTranlate to italian: Francesco Sabatini</string>
+    <string name="label_about">Sobre o App</string>
 </resources>

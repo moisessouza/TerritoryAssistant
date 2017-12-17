@@ -1,7 +1,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
-    android:layout_height="120dip"
-    android:padding="6dip">
+    android:layout_height="wrap_content"
+    android:padding="6dp">
 
     <View
         android:layout_width="5dp"
@@ -9,45 +10,35 @@
         android:layout_alignBottom="@+id/img_foto_territorio"
         android:id="@+id/bar_marcado"
         android:layout_alignTop="@+id/img_foto_territorio" />
+
     <ImageView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
         android:id="@+id/img_foto_territorio"
         android:src="@android:drawable/ic_menu_camera"
         android:background="#80000000"
         android:layout_alignParentTop="true"
-        android:layout_marginRight="5dp"
+        android:layout_marginEnd="5dp"
         android:layout_marginTop="6dp"
-        android:layout_marginLeft="1dp"
-        android:layout_toRightOf="@+id/bar_marcado"
         android:layout_toEndOf="@+id/bar_marcado" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Codigo de territorio"
+        android:textAppearance="?android:attr/textAppearanceSmall"
         android:id="@+id/txt_codigo_territorio"
-        android:layout_alignParentRight="true"
+        android:layout_marginTop="6dp"
         android:layout_alignParentEnd="true"
-        android:layout_toRightOf="@+id/img_foto_territorio"
         android:layout_toEndOf="@+id/img_foto_territorio" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/nome_dirigente"
-        android:id="@+id/lab_nome_dirigente"
-        android:layout_below="@+id/txt_codigo_territorio"
-        android:layout_toRightOf="@+id/img_foto_territorio"
-        android:layout_alignRight="@+id/txt_nome_dirigente"
-        android:layout_alignEnd="@+id/txt_nome_dirigente" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Nome do dirigente"
+        android:textAppearance="?android:attr/textAppearanceSmall"
         android:id="@+id/txt_nome_dirigente"
-        android:layout_below="@+id/lab_nome_dirigente"
+        android:layout_below="@+id/txt_codigo_territorio"
         android:layout_alignRight="@+id/txt_codigo_territorio"
         android:layout_alignEnd="@+id/txt_codigo_territorio"
         android:layout_toRightOf="@+id/img_foto_territorio"
@@ -56,31 +47,33 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="Quinta"
         android:id="@+id/txt_dia_semana"
+        android:textAppearance="?android:textAppearanceSmall"
+        android:paddingLeft="4dp"
         android:layout_below="@+id/txt_nome_dirigente"
-        android:layout_alignLeft="@+id/lab_nome_dirigente"
-        android:layout_alignStart="@+id/lab_nome_dirigente"
-        android:layout_alignRight="@+id/txt_nome_dirigente"
-        android:layout_alignEnd="@+id/txt_nome_dirigente" />
+        android:layout_toEndOf="@+id/txt_data_inicio" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textAppearance="?android:attr/textAppearanceSmall"
         android:id="@+id/txt_data_inicio"
-        android:layout_below="@+id/txt_dia_semana"
-        android:layout_alignRight="@+id/txt_nome_dirigente"
-        android:layout_alignEnd="@+id/txt_nome_dirigente"
-        android:layout_alignLeft="@+id/txt_dia_semana"
-        android:layout_alignStart="@+id/txt_dia_semana" />
+        android:text="29/12/2017"
 
-    <ImageButton
+        android:layout_below="@+id/txt_nome_dirigente"
+        android:layout_toEndOf="@+id/img_foto_territorio" />
+
+    <TextView
+        android:id="@+id/btn_fechar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/btn_fechar"
-        android:src="@android:drawable/ic_input_get"
-        android:layout_alignParentRight="true"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="&#8942;"
         android:layout_alignParentEnd="true"
-        android:layout_alignBottom="@+id/img_foto_territorio"
-        android:layout_alignParentTop="true" />
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+        android:layout_marginTop="6dp"
+        tools:ignore="HardcodedText" />
+
 </RelativeLayout>

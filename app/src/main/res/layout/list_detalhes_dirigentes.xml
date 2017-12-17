@@ -1,6 +1,6 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
-    android:layout_height="100dip"
+    android:layout_height="wrap_content"
     android:padding="6dip" >
     <!--android:layout_height="?android:attr/listPreferredItemHeight"-->
 
@@ -8,6 +8,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/nome_dirigente"
+        android:textAppearance="?android:textAppearanceSmall"
         android:id="@+id/lab_nome_dirigente"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
@@ -17,7 +18,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textAppearance="?android:attr/textAppearanceSmall"
         android:id="@+id/txt_nome_dirigente"
         android:layout_below="@+id/lab_nome_dirigente"
         android:layout_alignParentLeft="true"
@@ -29,6 +30,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/territorios"
+        android:textAppearance="?android:textAppearanceSmall"
         android:id="@+id/lab_territorios"
         android:layout_below="@+id/txt_nome_dirigente"
         android:layout_alignParentLeft="true"
@@ -38,7 +40,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textAppearance="?android:attr/textAppearanceSmall"
         android:id="@+id/txt_territorios"
         android:layout_below="@+id/lab_territorios"
         android:layout_alignParentLeft="true"

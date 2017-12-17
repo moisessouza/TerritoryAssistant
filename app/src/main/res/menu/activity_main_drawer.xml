@@ -2,38 +2,30 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <group android:checkableBehavior="single">
-        <item android:id="@+id/nav_dirigentes"
-            android:icon="@drawable/ic_publicador"
+        <item android:id="@+id/nav_dirigentes" android:icon="@drawable/ic_person_add"
             android:title="@string/dirigentes" />
-        <item android:id="@+id/nav_grupos"
-            android:icon="@drawable/ic_grupos"
+        <item android:id="@+id/nav_grupos" android:icon="@drawable/ic_group_add"
             android:title="@string/grupos_de_saida" />
-        <item android:id="@+id/nav_territorios"
-            android:icon="@drawable/ic_territorios"
+        <item android:id="@+id/nav_territorios" android:icon="@drawable/ic_map"
             android:title="@string/territorios" />
     </group>
 
     <item android:title="@string/funcoes">
         <menu>
-            <item android:id="@+id/nav_designar_territorios"
-                android:icon="@drawable/ic_designar"
+            <item android:id="@+id/nav_designar_territorios" android:icon="@drawable/ic_designate"
                 android:title="@string/designar_territorios" />
-            <item android:id="@+id/nav_territorios_designados"
-                android:icon="@drawable/ic_historico"
+            <item android:id="@+id/nav_territorios_designados" android:icon="@drawable/ic_history"
                 android:title="@string/historico" />
-            <item android:id="@+id/nav_sugerir"
-                android:icon="@drawable/ic_sugerir"
+            <item android:id="@+id/nav_sugerir" android:icon="@drawable/ic_find_in_page"
                 android:title="@string/sugerir_territorios" />
         </menu>
     </item>
 
     <item android:title="@string/ferramentas">
         <menu>
-            <item android:id="@+id/nav_exportar_dados"
-                android:icon="@drawable/ic_exportar"
+            <item android:id="@+id/nav_exportar_dados" android:icon="@drawable/ic_upload"
                 android:title="@string/exportar_dados"/>
-            <item android:id="@+id/nav_importar_dados"
-                android:icon="@drawable/ic_importar"
+            <item android:id="@+id/nav_importar_dados" android:icon="@drawable/ic_download"
                 android:title="@string/importar_dados"/>
         </menu>
 

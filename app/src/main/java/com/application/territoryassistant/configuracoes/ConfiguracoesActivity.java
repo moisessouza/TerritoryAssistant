@@ -54,6 +54,7 @@ public class ConfiguracoesActivity extends AppCompatActivity {
 
                 ToastHelper.toast(ConfiguracoesActivity.this,
                         ConfiguracoesActivity.this.getString(R.string.configuracoes_salvas));
+               finish();
             }
         });
 

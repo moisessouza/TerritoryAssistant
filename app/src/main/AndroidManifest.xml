@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.application.territoryassistant" >
+    package="com.application.territoryassistant">
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
@@ -14,11 +14,11 @@
         android:label="@string/app_name"
         android:largeHeap="true"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/AppTheme">
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar" >
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -29,7 +29,7 @@
             android:name=".dirigentes.DirigentesActivity"
             android:label="@string/title_activity_dirigentes"
             android:parentActivityName=".MainActivity"
-            android:theme="@style/AppTheme.NoActionBar" >
+            android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.application.territoryassistant.MainActivity" />
@@ -38,7 +38,7 @@
             android:name=".dirigentes.NovoDirigenteActivity"
             android:label="@string/title_activity_novo_dirigente"
             android:parentActivityName=".dirigentes.DirigentesActivity"
-            android:theme="@style/AppTheme.NoActionBar" >
+            android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.application.territoryassistant.dirigentes.DirigentesActivity" />
@@ -47,7 +47,7 @@
             android:name=".dirigentes.EditarDirigenteActivity"
             android:label="@string/title_activity_editar_dirigente"
             android:parentActivityName=".dirigentes.DirigentesActivity"
-            android:theme="@style/AppTheme.NoActionBar" >
+            android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.application.territoryassistant.dirigentes.DirigentesActivity" />
@@ -56,7 +56,7 @@
             android:name=".territorios.TerritoriosActivity"
             android:label="@string/title_activity_territorios"
             android:parentActivityName=".MainActivity"
-            android:theme="@style/AppTheme.NoActionBar" >
+            android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.application.territoryassistant.MainActivity" />
@@ -65,7 +65,7 @@
             android:name=".territorios.NovoTerritorioActivity"
             android:label="@string/title_activity_novo_territorio"
             android:parentActivityName=".territorios.TerritoriosActivity"
-            android:theme="@style/AppTheme.NoActionBar" >
+            android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.application.territoryassistant.territorios.TerritoriosActivity" />
@@ -74,7 +74,7 @@
             android:name=".territorios.EditarTerritorioActivity"
             android:label="@string/title_activity_editar_territorio"
             android:parentActivityName=".territorios.TerritoriosActivity"
-            android:theme="@style/AppTheme.NoActionBar" >
+            android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.application.territoryassistant.territorios.TerritoriosActivity" />
@@ -83,7 +83,7 @@
             android:name=".grupos.GruposActivity"
             android:label="@string/title_activity_grupos"
             android:parentActivityName=".MainActivity"
-            android:theme="@style/AppTheme.NoActionBar" >
+            android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.application.territoryassistant.MainActivity" />
@@ -92,7 +92,7 @@
             android:name=".grupos.NovoGrupoActivity"
             android:label="@string/title_activity_novo_grupo"
             android:parentActivityName=".grupos.GruposActivity"
-            android:theme="@style/AppTheme.NoActionBar" >
+            android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.application.territoryassistant.grupos.GruposActivity" />
@@ -101,7 +101,7 @@
             android:name=".grupos.EditarGrupoActivity"
             android:label="@string/title_activity_editar_grupo"
             android:parentActivityName=".grupos.GruposActivity"
-            android:theme="@style/AppTheme.NoActionBar" >
+            android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.application.territoryassistant.grupos.GruposActivity" />
@@ -110,7 +110,7 @@
             android:name=".designar.DesignarActivity"
             android:label="@string/title_activity_designar"
             android:parentActivityName=".MainActivity"
-            android:theme="@style/AppTheme.NoActionBar" >
+            android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.application.territoryassistant.MainActivity" />
@@ -119,7 +119,7 @@
             android:name=".designar.VerDesignadosActivity"
             android:label="@string/title_activity_ver_designados"
             android:parentActivityName=".MainActivity"
-            android:theme="@style/AppTheme.NoActionBar" >
+            android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.application.territoryassistant.MainActivity" />
@@ -128,7 +128,7 @@
             android:name=".designar.FecharDesignacaoActivity"
             android:label="@string/title_activity_fechar_designacao"
             android:parentActivityName=".MainActivity"
-            android:theme="@style/AppTheme.NoActionBar" >
+            android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.application.territoryassistant.MainActivity" />
@@ -137,7 +137,7 @@
             android:name=".sugerir.SugerirActivity"
             android:label="@string/title_activity_sugerir"
             android:parentActivityName=".MainActivity"
-            android:theme="@style/AppTheme.NoActionBar" >
+            android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.application.territoryassistant.MainActivity" />
@@ -146,7 +146,7 @@
             android:name=".historico.HistoricoActivity"
             android:label="@string/title_activity_historio"
             android:parentActivityName=".designar.VerDesignadosActivity"
-            android:theme="@style/AppTheme.NoActionBar" >
+            android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.application.territoryassistant.designar.VerDesignadosActivity" />
@@ -154,19 +154,20 @@
         <activity
             android:name=".fototerritorio.FotoTerritorioActivity"
             android:label="@string/title_activity_foto_territorio"
-            android:theme="@style/AppTheme.NoActionBar" >
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".configuracoes.ConfiguracoesActivity"
             android:label="@string/title_activity_configuracoes"
             android:parentActivityName=".MainActivity"
-            android:theme="@style/AppTheme.NoActionBar" >
+            android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.application.territoryassistant.MainActivity" />
         </activity>
-        <activity android:name=".about.AboutActivity" >
-        </activity>
+        <activity android:name=".about.AboutActivity"
+            android:label="@string/label_about"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
     </application>
 
 </manifest>

@@ -19,7 +19,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by moises on 30/12/15.
+ * Created by moises on 30/12/15. Edited by Charllys Fernandes on 15/10/2017
  */
 public class DBHelper extends SQLiteOpenHelper {
 
