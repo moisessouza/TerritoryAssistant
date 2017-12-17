@@ -8,7 +8,7 @@
     <string name="title_activity_dirigentes">Conductors</string>
     <string name="title_activity_novo_dirigente">New Conductor</string>
 
-<!-- TODO: Remove or change this placeholder text -->
+    <!-- TODO: Remove or change this placeholder text -->
     <string name="title_activity_editar_dirigente">Edit Conductor</string>
     <string name="title_activity_territorios">Territories</string>
     <string name="title_activity_novo_territorio">New territory</string>
@@ -33,8 +33,8 @@
     <string name="designacao">Designations</string>
     <string name="data_inicio">Start date</string>
     <string name="devolucao">Restitution</string>
-    <string name="oferta">Offer</string>
-    <string name="revista">Magazine</string>
+
+
     <string name="data_fim">End date</string>
     <string name="registros_marcados_aba_designados">The records were marked on the Designate tab.</string>
     <string name="territorio_devolvido">Territory returned</string>
@@ -87,11 +87,11 @@
     <!-- Frases da aplicacao de xmls -->
     <string name="texto_padrao_dirigente">Pattern text for conductor</string>
     <string name="numero_dias_descanso_territorio">Number of days of rest for territory</string>
-    <string name="dirigente">Conductor</string>
-    <string name="data_inicio_tres_pontos">Start date…</string>
+    <string name="dirigente">Publisher</string>
+    <string name="data_inicio_tres_pontos">Start date...</string>
     <string name="designar">Designate</string>
     <string name="nome_dirigente">Conductor’s name</string>
-    <string name="email_dirigente">email</string>
+    <string name="email_dirigente">Conductor’s email</string>
     <string name="gravar">Save</string>
     <string name="voltar">Return</string>
     <string name="nome_grupo">Group’s name</string>
@@ -110,9 +110,9 @@
     <string name="ordenar_por_data">Sort by date</string>
     <string name="somente_nao_designados">Only not designated</string>
     <string name="ultima_data">Last date:</string>
-    <string name="digite_codigo_territorio">Enter code of territory …</string>
-    <string name="selecione_abaixo_para_fechar">Select below to close …</string>
-    <string name="selecione_enviar_mensagem">Select to send a message …</string>
+    <string name="digite_codigo_territorio">Enter code of territory ...</string>
+    <string name="selecione_abaixo_para_fechar">Select below to close ...</string>
+    <string name="selecione_enviar_mensagem">Select to send a message ...</string>
     <string name="nao_ha_designacao_aberto">There is no designation open. To designate a territory, open the menu in the upper left of your screen.</string>
     <string name="territorios">Territories</string>
     <string name="acao">Action</string>
@@ -130,4 +130,13 @@
     <string name="editar">Edit</string>
     <string name="enviar_mensagem">Send mensage</string>
     <string name="marcar_registros">Mark records</string>
+
+    <string name="type1">Morning</string>
+    <string name="type2">Afternoon</string>
+
+
+    <string name="text_about">Aplicativo destinado à gerência de territórios para pregação. É destinado ao servo de territórios. \nPrincipais finalidades: \n- Designação de territórios;\n- Histórico para posteriores consultas;\n- Opção para sugestão de territórios a serem trabalhados; \n- Territórios próximos (configure os territórios vizinhos); \n- É possível fazer backups dos dados; \n\n- Módulo separado para transferir os dados para um arquivo PDF:\nhttps://drive.google.com/file/d/0B93WFEtl7HpScUl4ZjJSdEhjVms/view?usp=sharing\n\nEsse aplicativo NÃO dispensa o uso do formulário S-13.\n</string>
+    <string name="text_developer">Developer: Moisés de Souza\nEdited for: Charllys Fernandes\nTranlate to italian: Francesco Sabatini</string>
+    <string name="label_about">About</string>
+
 </resources>

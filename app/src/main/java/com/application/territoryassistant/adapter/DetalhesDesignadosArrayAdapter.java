@@ -3,17 +3,14 @@ package com.application.territoryassistant.adapter;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.os.AsyncTask;
-import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.PopupMenu;
 import android.widget.TextView;
@@ -24,7 +21,6 @@ import com.application.territoryassistant.designar.FecharDesignacaoActivity;
 import com.application.territoryassistant.designar.vo.DesignacaoVO;
 import com.application.territoryassistant.helper.FotoHelper;
 import com.application.territoryassistant.manager.FotoManager;
-import com.application.territoryassistant.territorios.vo.TerritorioVO;
 
 import java.util.HashMap;
 import java.util.List;
@@ -66,11 +62,11 @@ public class DetalhesDesignadosArrayAdapter extends ArrayAdapter<DesignacaoVO> {
             TextView mData;
             ImageView mFoto;
             TextView mNomeDirigente;
-            ImageButton mFechar;
+            TextView mFechar;
             View mMarcado;
 
             // Labels
-            private TextView lNomeDirigente;
+            //private TextView lNomeDirigente;
 
             final View rowView;
 
@@ -88,9 +84,9 @@ public class DetalhesDesignadosArrayAdapter extends ArrayAdapter<DesignacaoVO> {
                 mFoto = (ImageView) rowView.findViewById(R.id.img_foto_territorio);
                 mNomeDirigente = (TextView) rowView.findViewById(R.id.txt_nome_dirigente);
 
-                lNomeDirigente = (TextView)rowView.findViewById(R.id.lab_nome_dirigente);
+                //lNomeDirigente = (TextView)rowView.findViewById(R.id.lab_nome_dirigente);
 
-                mFechar = (ImageButton) rowView.findViewById(R.id.btn_fechar);
+                mFechar = (TextView) rowView.findViewById(R.id.btn_fechar);
 
                 mMarcado = rowView.findViewById(R.id.bar_marcado);
 
@@ -149,12 +145,8 @@ public class DetalhesDesignadosArrayAdapter extends ArrayAdapter<DesignacaoVO> {
                     }
                 };
 
-                mCodigo.setOnClickListener(marcarListener);
-                mData.setOnClickListener(marcarListener);
-                mDiaSemana.setOnClickListener(marcarListener);
-                mNomeDirigente.setOnClickListener(marcarListener);
-                lNomeDirigente.setOnClickListener(marcarListener);
-                mFechar.setOnClickListener(listener);
+                //lNomeDirigente.setOnClickListener(marcarListener);
+                mFechar.setOnClickListener(marcarListener); //listener
 
                 mFoto.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -182,7 +174,8 @@ public class DetalhesDesignadosArrayAdapter extends ArrayAdapter<DesignacaoVO> {
 
             }
 
-            private void fecharRegistro(DesignacaoVO vo) {
+            private void fecharRegistro(final DesignacaoVO vo) {
+
                 Intent intent = new Intent(context, FecharDesignacaoActivity.class);
                 intent.putExtra("ID", vo.getId());
                 ((Activity) context).startActivityForResult(intent, 3);
@@ -228,7 +221,7 @@ public class DetalhesDesignadosArrayAdapter extends ArrayAdapter<DesignacaoVO> {
                 mData.setTag(vo);
                 mDiaSemana.setTag(vo);
                 mNomeDirigente.setTag(vo);
-                lNomeDirigente.setTag(vo);
+                //lNomeDirigente.setTag(vo);
                 mFoto.setTag(vo);
                 mFechar.setTag(vo);
             }

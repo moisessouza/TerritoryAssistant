@@ -2,10 +2,7 @@ package com.application.territoryassistant.designar;
 
 import android.app.DatePickerDialog;
 import android.content.DialogInterface;
-import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -14,9 +11,7 @@ import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.application.territoryassistant.MainActivity;
 import com.application.territoryassistant.R;
 import com.application.territoryassistant.bd.DesignacaoDBHelper;
 import com.application.territoryassistant.bd.DirigenteDBHelper;
@@ -82,10 +77,10 @@ public class FecharDesignacaoActivity extends AppCompatActivity {
 
         String ti = designacaoVO.getTipo();
 
-        if ("O".equals(ti)){
-            t.setText(getString(R.string.oferta));
+        if ("M".equals(ti)){
+            t.setText(getString(R.string.type1));
         } else {
-            t.setText(getString(R.string.revista));
+            t.setText(getString(R.string.type2));
         }
 
         Long dataInicio = designacaoVO.getDataInicio();

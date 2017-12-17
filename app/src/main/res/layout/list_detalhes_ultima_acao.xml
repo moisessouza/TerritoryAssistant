@@ -1,13 +1,14 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
-    android:layout_height="200dip"
-    android:padding="6dip" >
+    android:layout_height="wrap_content"
+    android:padding="6dp">
     <!--android:layout_height="?android:attr/listPreferredItemHeight"-->
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/acao"
+        android:textAppearance="?android:textAppearanceSmall"
         android:id="@+id/lab_acao"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
@@ -15,9 +16,10 @@
         android:enabled="false"/>
 
     <TextView
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textAppearance="?android:attr/textAppearanceSmall"
         android:id="@+id/txt_acao"
         android:layout_below="@+id/lab_acao"
         android:layout_alignParentLeft="true"
@@ -26,6 +28,7 @@
         android:layout_alignParentEnd="true"/>
 
     <TextView
+        android:textAppearance="?android:textAppearanceSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/nome_dirigente"
@@ -38,7 +41,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textAppearance="?android:attr/textAppearanceSmall"
         android:id="@+id/txt_nome_dirigente"
         android:layout_below="@+id/lab_nome_dirigente"
         android:layout_alignParentLeft="true"
@@ -47,6 +50,7 @@
         android:layout_alignParentEnd="true"/>
 
     <TextView
+        android:textAppearance="?android:textAppearanceSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/territorios"
@@ -57,9 +61,10 @@
         android:enabled="false"/>
 
     <TextView
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textAppearance="?android:attr/textAppearanceSmall"
         android:id="@+id/txt_territorios"
         android:layout_below="@+id/lab_territorios"
         android:layout_alignParentLeft="true"
@@ -68,6 +73,7 @@
         android:layout_alignParentEnd="true"/>
 
     <TextView
+        android:textAppearance="?android:textAppearanceSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/data"
@@ -78,6 +84,7 @@
         android:enabled="false"/>
 
     <TextView
+        android:textAppearance="?android:textAppearanceSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/data"

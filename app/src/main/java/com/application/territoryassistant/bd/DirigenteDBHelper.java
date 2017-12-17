@@ -34,7 +34,7 @@ public class DirigenteDBHelper extends DBHelper {
     public List<DirigentesVO> buscarDirigentes() {
 
         SQLiteDatabase db = this.getWritableDatabase();
-        Cursor cursor = db.query(true, TAB_DIRIGENTES, new String[]{"ID", "NOME", "EMAIL"}, null, null, null, null, null, null);
+        Cursor cursor = db.query(true, TAB_DIRIGENTES, new String[]{"ID", "NOME", "EMAIL"}, null, null, null, null, "NOME"+ " ASC", null);
 
         List<DirigentesVO> dirigentes = new ArrayList<DirigentesVO>();
 
@@ -62,7 +62,7 @@ public class DirigenteDBHelper extends DBHelper {
         SQLiteDatabase db = this.getWritableDatabase();
 
         //query (boolean distinct, String table, String[] columns, String selection, String[] selectionArgs, String groupBy, String having, String orderBy, String limit)
-        Cursor cursor = db.query(true, TAB_DIRIGENTES, new String[]{"ID", "NOME", "EMAIL"}, "ID=?", new String[] {id.toString()}, null, null, null, null);
+        Cursor cursor = db.query(true, TAB_DIRIGENTES, new String[]{"ID", "NOME", "EMAIL"}, "ID=?", new String[] {id.toString()}, null, null, "NOME"+ " ASC", null);
 
         DirigentesVO vo = null;
 
@@ -110,7 +110,7 @@ public class DirigenteDBHelper extends DBHelper {
             }
         }
 
-        Cursor cursor = db.query(true, TAB_DIRIGENTES, new String[]{"ID", "NOME", "EMAIL"}, "ID in (" + args.toString() + ")", content.toArray(new String[]{}), null, null, null, null);
+        Cursor cursor = db.query(true, TAB_DIRIGENTES, new String[]{"ID", "NOME", "EMAIL"}, "ID in (" + args.toString() + ")", content.toArray(new String[]{}), null, null, "NOME"+ " ASC", null);
 
         DirigentesVO vo = null;
         List<DirigentesVO> dirigentesVOs = new ArrayList<>();
