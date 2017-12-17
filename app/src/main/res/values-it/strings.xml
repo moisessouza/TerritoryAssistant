@@ -49,6 +49,7 @@
     <string name="tem_certeza_deletar_designacao">Sei sicuro di cancellare questa assegnazione?</string>
     <string name="sim">Sì</string>
     <string name="nao">No</string>
+    <string name="OK">OK</string>
     <string name="dirigente_ja_designado">Il conduttore è stato designato</string>
     <string name="dirigente_atualizado">Conduttore %1$s aggiornato.</string>
     <string name="nome_obrigatorio">Il nome è obbligatorio</string>
