@@ -139,6 +139,6 @@
     <string name="text_developer">Developer: Moisés de Souza\nEdited for: Charllys Fernandes\nTranlate to italian: Francesco Sabatini</string>
     <string name="label_about">About</string>
     <string name="cod_error">Code is empty</string>
-    <string name="error_novo_grupo">Nome do grupo é obrigatório</string>
+    <string name="error_novo_grupo">Erro</string>
 
 </resources>
