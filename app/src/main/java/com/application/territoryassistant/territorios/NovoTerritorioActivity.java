@@ -96,7 +96,6 @@ public class NovoTerritorioActivity extends AppCompatActivity {
                 for (TerritorioVO territorioVO : legado) {
                     if (terVO.getId().equals(territorioVO.getId())) {
                         territoriosSelecionados.add(terVO);
-                        continue;
                     }
                 }
             }
@@ -124,33 +123,41 @@ public class NovoTerritorioActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                EditText t = (EditText) findViewById(R.id.txt_cod_territorio);
+                EditText txt_cod = (EditText) findViewById(R.id.txt_cod_territorio);
                 Spinner s = (Spinner) findViewById(R.id.spinner_grupos);
                 EditText obs = (EditText) findViewById(R.id.txt_observacoes);
                 CheckBox check = (CheckBox) findViewById(R.id.check_suspenso);
 
-                String cod = t.getText().toString();
+                String cod = txt_cod.getText().toString();
                 String observacoes = obs.getText().toString();
                 GrupoVO grupoVO = (GrupoVO) s.getSelectedItem();
                 Boolean suspenso = check.isChecked();
 
-                if (dbTerritorio.buscarTerritorioPorCod(cod) == null) {
+                if (cod.isEmpty()){
+                    ToastHelper.toast(getBaseContext(), getString(R.string.cod_error));
 
-                    Long idTerritorio = dbTerritorio.gravarTerritorio(cod, grupoVO.getId(), observacoes, photoPath, suspenso);
-                    if (idTerritorio != -1 && territoriosSelecionados != null && !territoriosSelecionados.isEmpty()) {
-                        dbTerritorio.gravarVizinhos(Long.valueOf(idTerritorio).intValue(), territoriosSelecionados);
+                }else {
+
+                    if (dbTerritorio.buscarTerritorioPorCod(cod) == null) {
+
+                        Long idTerritorio = dbTerritorio.gravarTerritorio(cod, grupoVO.getId(), observacoes, photoPath, suspenso);
+                        if (idTerritorio != -1 && territoriosSelecionados != null && !territoriosSelecionados.isEmpty()) {
+                            dbTerritorio.gravarVizinhos(Long.valueOf(idTerritorio).intValue(), territoriosSelecionados);
+                        }
+
+                        ToastHelper.toast(getBaseContext(), getString(R.string.territorio_inserido, cod));
+
+                        territorioVOs = dbTerritorio.buscarTerritorios();
+                        territoriosSelecionados.clear();
+
+                        finish();
+
+                    } else {
+                        ToastHelper.toast(getBaseContext(), getString(R.string.territorio_ja_existe, cod));
                     }
 
-                    ToastHelper.toast(getBaseContext(), getString(R.string.territorio_inserido, cod));
-
-                    territorioVOs = dbTerritorio.buscarTerritorios();
-                    territoriosSelecionados.clear();
-
-                    finish();
-
-                } else {
-                    ToastHelper.toast(getBaseContext(), getString(R.string.territorio_ja_existe, cod));
                 }
+
 
             }
         });

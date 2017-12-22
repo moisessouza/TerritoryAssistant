@@ -85,7 +85,7 @@
     <string name="texto_padrao_dirigente">Testo predefinito per il conduttore</string>
     <string name="numero_dias_descanso_territorio">Numero di giorni di riposo per il territorio</string>
     <string name="dirigente">Conduttore</string>
-    <string name="data_inicio_tres_pontos">Data inizio...</string>
+    <string name="data_inicio_tres_pontos">Data inizio…</string>
     <string name="designar">Assegnazione</string>
     <string name="nome_dirigente">Nome del conduttore</string>
     <string name="email_dirigente">Mail del condutttore</string>
@@ -97,7 +97,7 @@
     <string name="deletar">Cancella</string>
     <string name="grupo">Gruppo</string>
     <string name="suspenso">Sospeso</string>
-    <string name="enter_adicionar_linhas">Premi Invio per aggiungere linee...</string>
+    <string name="enter_adicionar_linhas">Premi Invio per aggiungere linee…</string>
     <string name="selecionar_vizinhos">Selezionare vicini</string>
     <string name="numero_de_territorios">Numero di territori</string>
     <string name="somente_vizinhos">Solo territori vicini</string>
@@ -107,9 +107,9 @@
     <string name="ordenar_por_data">Ordinare per data</string>
     <string name="somente_nao_designados">Solo non assegnati</string>
     <string name="ultima_data">Ultima data:</string>
-    <string name="digite_codigo_territorio">Scrivi numero del territorio...</string>
-    <string name="selecione_abaixo_para_fechar">Seleziona qui sotto per chiudere...</string>
-    <string name="selecione_enviar_mensagem">Selezionare per inviare un messaggio...</string>
+    <string name="digite_codigo_territorio">Scrivi numero del territorio…</string>
+    <string name="selecione_abaixo_para_fechar">Seleziona qui sotto per chiudere…</string>
+    <string name="selecione_enviar_mensagem">Selezionare per inviare un messaggio…</string>
     <string name="nao_ha_designacao_aberto">Non c\'è nessuna assegnazione. Per assegnare un territorio, aprire il menu nella parte superiore sinistra dello schermo.</string>
     <string name="territorios">Territori</string>
     <string name="acao">Azione</string>
@@ -133,4 +133,5 @@
     <string name="text_about">Aplicativo destinado à gerência de territórios para pregação. É destinado ao servo de territórios. \nPrincipais finalidades: \n- Designação de territórios;\n- Histórico para posteriores consultas;\n- Opção para sugestão de territórios a serem trabalhados; \n- Territórios próximos (configure os territórios vizinhos); \n- É possível fazer backups dos dados; \n\n- Módulo separado para transferir os dados para um arquivo PDF. \nhttps://drive.google.com/file/d/0B93WFEtl7HpScUl4ZjJSdEhjVms/view?usp=sharing\n\nEsse aplicativo NÃO dispensa o uso do formulário S-13.</string>
     <string name="text_developer">Developer: Moisés de Souza\nEdited for: Charllys Fernandes\nTranlate to italian: Francesco Sabatini</string>
     <string name="label_about">Sobre o App</string>
+    <string name="cod_error">Código do território vazio</string>
 </resources>
