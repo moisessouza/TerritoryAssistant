@@ -28,10 +28,10 @@
     <!-- Frases da aplicação de arquivos java -->
     <string name="codigos">Códigos</string>
     <string name="codigo">Código</string>
-    <string name="enviar_dados_para">Enviar dados para...</string>
+    <string name="enviar_dados_para">Enviar dados para…</string>
     <string name="observacoes">Observações</string>
     <string name="designacao">Designação</string>
-    <string name="data_inicio">Data inicio</string>
+    <string name="data_inicio">Data início</string>
     <string name="devolucao">Devolução</string>
     <string name="data_fim">Data fim</string>
     <string name="registros_marcados_aba_designados">Os registros foram marcados na aba Designados.</string>
@@ -40,10 +40,10 @@
     <string name="verificar_territorios_estao_irmao">Olá irmão, teria como verificar se os seguintes territórios ainda estão com o irmão?</string>
     <string name="configuracoes_salvas">Configurações salvas</string>
     <string name="selecionar_territorios">Selecionar territórios</string>
-    <string name="preencha_data_inicio">Preencha data de inicio</string>
+    <string name="preencha_data_inicio">Preencha data de início</string>
     <string name="selecione_territorios">Selecione os territórios</string>
     <string name="preencha_data_fim">Preencha data fim</string>
-    <string name="data_fim_maior_igual_data_inicio">Data fim deve ser maior ou igual a data inicio</string>
+    <string name="data_fim_maior_igual_data_inicio">Data fim deve ser maior ou igual a data início</string>
     <string name="tem_certeza_deletar_designacao">Tem certeza que deseja deletar essa designação?</string>
     <string name="sim">Sim</string>
     <string name="nao">Não</string>
@@ -52,7 +52,7 @@
     <string name="dirigente_atualizado">Publicador %1$s atualizado.</string>
     <string name="nome_obrigatorio">Nome é obrigatório</string>
     <string name="dirigente_inserido">Publicador %1$s inserido.</string>
-    <string name="selecione">Selecione...</string>
+    <string name="selecione">Selecione…</string>
     <string name="grupo_atualizado">Grupo %1$s atualizado.</string>
     <string name="grupo_associado_territorio">Este grupo já está associado a um território</string>
     <string name="grupo_inserido">Grupo %1$s inserido.</string>
@@ -86,7 +86,7 @@
     <string name="texto_padrao_dirigente">Texto padrão para o publicador</string>
     <string name="numero_dias_descanso_territorio">Número de dias de descanso para o território</string>
     <string name="dirigente">Publicador</string>
-    <string name="data_inicio_tres_pontos">Data inicio...</string>
+    <string name="data_inicio_tres_pontos">Data início…</string>
     <string name="designar">Designar</string>
     <string name="nome_dirigente">Nome do publicador</string>
     <string name="email_dirigente">Email do publicador</string>
@@ -98,7 +98,7 @@
     <string name="deletar">Deletar</string>
     <string name="grupo">Grupo</string>
     <string name="suspenso">Suspenso</string>
-    <string name="enter_adicionar_linhas">Aperte enter para adicionar linhas...</string>
+    <string name="enter_adicionar_linhas">Aperte enter para adicionar linhas…</string>
     <string name="selecionar_vizinhos">Selecionar vizinhos</string>
     <string name="numero_de_territorios">Número de territórios</string>
     <string name="somente_vizinhos">Somente territórios vizinhos</string>
@@ -108,9 +108,9 @@
     <string name="ordenar_por_data">Ordernar por data</string>
     <string name="somente_nao_designados">Somente não designados</string>
     <string name="ultima_data">Última data:</string>
-    <string name="digite_codigo_territorio">Digite codigo do território...</string>
-    <string name="selecione_abaixo_para_fechar">Selecione abaixo para fechar...</string>
-    <string name="selecione_enviar_mensagem">Selecione para enviar mensagem...</string>
+    <string name="digite_codigo_territorio">Digite codigo do território…</string>
+    <string name="selecione_abaixo_para_fechar">Selecione abaixo para fechar…</string>
+    <string name="selecione_enviar_mensagem">Selecione para enviar mensagem…</string>
     <string name="nao_ha_designacao_aberto">Não há nenhuma designação em aberto. Para designar um território, abra o menu no canto superior esquedo de sua tela.</string>
     <string name="territorios">Territórios</string>
     <string name="acao">Ação</string>
@@ -133,4 +133,6 @@
     <string name="text_about">Aplicativo destinado à gerência de territórios para pregação. É destinado ao servo de territórios. \nPrincipais finalidades: \n- Designação de territórios;\n- Histórico para posteriores consultas;\n- Opção para sugestão de territórios a serem trabalhados; \n- Territórios próximos (configure os territórios vizinhos); \n- É possível fazer backups dos dados; \n\n- Módulo separado para transferir os dados para um arquivo PDF:\nhttps://drive.google.com/file/d/0B93WFEtl7HpScUl4ZjJSdEhjVms/view?usp=sharing\n</string>
     <string name="text_developer">Desenvolvido por: Moisés de Souza\nEditado por: Charllys Fernandes\nTraduzido para o italiano por: Francesco Sabatini</string>
     <string name="label_about">Sobre o App</string>
+    <string name="cod_error">Código do território vazio</string>
+    <string name="error_novo_grupo">Nome do grupo é obrigatório</string>
 </resources>

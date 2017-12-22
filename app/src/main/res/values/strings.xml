@@ -88,7 +88,7 @@
     <string name="texto_padrao_dirigente">Pattern text for conductor</string>
     <string name="numero_dias_descanso_territorio">Number of days of rest for territory</string>
     <string name="dirigente">Publisher</string>
-    <string name="data_inicio_tres_pontos">Start date...</string>
+    <string name="data_inicio_tres_pontos">Start date…</string>
     <string name="designar">Designate</string>
     <string name="nome_dirigente">Conductor’s name</string>
     <string name="email_dirigente">Conductor’s email</string>
@@ -110,9 +110,9 @@
     <string name="ordenar_por_data">Sort by date</string>
     <string name="somente_nao_designados">Only not designated</string>
     <string name="ultima_data">Last date:</string>
-    <string name="digite_codigo_territorio">Enter code of territory ...</string>
-    <string name="selecione_abaixo_para_fechar">Select below to close ...</string>
-    <string name="selecione_enviar_mensagem">Select to send a message ...</string>
+    <string name="digite_codigo_territorio">Enter code of territory …</string>
+    <string name="selecione_abaixo_para_fechar">Select below to close …</string>
+    <string name="selecione_enviar_mensagem">Select to send a message …</string>
     <string name="nao_ha_designacao_aberto">There is no designation open. To designate a territory, open the menu in the upper left of your screen.</string>
     <string name="territorios">Territories</string>
     <string name="acao">Action</string>
@@ -138,5 +138,7 @@
     <string name="text_about">Aplicativo destinado à gerência de territórios para pregação. É destinado ao servo de territórios. \nPrincipais finalidades: \n- Designação de territórios;\n- Histórico para posteriores consultas;\n- Opção para sugestão de territórios a serem trabalhados; \n- Territórios próximos (configure os territórios vizinhos); \n- É possível fazer backups dos dados; \n\n- Módulo separado para transferir os dados para um arquivo PDF:\nhttps://drive.google.com/file/d/0B93WFEtl7HpScUl4ZjJSdEhjVms/view?usp=sharing\n\nEsse aplicativo NÃO dispensa o uso do formulário S-13.\n</string>
     <string name="text_developer">Developer: Moisés de Souza\nEdited for: Charllys Fernandes\nTranlate to italian: Francesco Sabatini</string>
     <string name="label_about">About</string>
+    <string name="cod_error">Code is empty</string>
+    <string name="error_novo_grupo">Erro</string>
 
 </resources>

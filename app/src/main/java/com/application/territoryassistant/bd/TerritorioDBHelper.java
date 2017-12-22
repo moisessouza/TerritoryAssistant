@@ -43,7 +43,7 @@ public class TerritorioDBHelper extends DBHelper {
     }
 
     public List<TerritorioVO> buscarTerritoriosNaoDesignados(){
-        return buscarTerritoriosNaoDesignados(false, null);
+        return buscarTerritoriosNaoDesignados(true, null);
     }
 
     public List<TerritorioVO> buscarTerritoriosNaoDesignados(boolean ordenarData, Integer idGrupo){

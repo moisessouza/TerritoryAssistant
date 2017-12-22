@@ -14,6 +14,7 @@ import android.widget.TextView;
 import com.application.territoryassistant.R;
 import com.application.territoryassistant.bd.GrupoDBHelper;
 import com.application.territoryassistant.dirigentes.DirigentesActivity;
+import com.application.territoryassistant.helper.ToastHelper;
 
 public class NovoGrupoActivity extends AppCompatActivity {
 
@@ -42,9 +43,14 @@ public class NovoGrupoActivity extends AppCompatActivity {
                 EditText txtNomeGrupo = (EditText)findViewById(R.id.txt_nome_grupo);
                 TextView mensagem = (TextView)findViewById(R.id.lab_mensagem);
                 String nome = txtNomeGrupo.getText().toString();
-                db.gravarGrupo(nome);
-                mensagem.setText(getString(R.string.grupo_inserido, nome));
-                txtNomeGrupo.setText(null);
+
+                if (nome.isEmpty()){
+                    ToastHelper.toast(getBaseContext(), getString(R.string.error_novo_grupo));
+                }else {
+                    db.gravarGrupo(nome);
+                    mensagem.setText(getString(R.string.grupo_inserido, nome));
+                    txtNomeGrupo.setText(null);
+                }
 
             }
         });
