@@ -134,4 +134,5 @@
     <string name="text_developer">Desenvolvido por: Moisés de Souza\nEditado por: Charllys Fernandes\nTraduzido para o italiano por: Francesco Sabatini</string>
     <string name="label_about">Sobre o App</string>
     <string name="cod_error">Código do território vazio</string>
+    <string name="error_novo_grupo">Nome do grupo é obrigatório</string>
 </resources>
