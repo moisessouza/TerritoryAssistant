@@ -49,6 +49,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -72,37 +73,37 @@ public class MainActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         // -----
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
 
         // Create the adapter that will return a fragment for each of the three
         // primary sections of the activity.
         mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager(), this);
 
         // Set up the ViewPager with the sections adapter.
-        mViewPager = (ViewPager) findViewById(R.id.container);
+        mViewPager = findViewById(R.id.container);
         mViewPager.setAdapter(mSectionsPagerAdapter);
 
-        TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
+        TabLayout tabLayout = findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(mViewPager);
 
         //-------
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.setDrawerListener(toggle);
         toggle.syncState();
 
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
     }
 
     @Override
     public void onBackPressed() {
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
@@ -162,7 +163,7 @@ public class MainActivity extends AppCompatActivity
             goToImortarDados();
         }
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
@@ -391,7 +392,7 @@ public class MainActivity extends AppCompatActivity
         private View criarTelaUltimaAcoes(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
             View rootView = inflater.inflate(R.layout.fragment_detalhes_ultimas_acoes, container, false);
-            ListView list = (ListView) rootView.findViewById(R.id.list_detalhes_ultima_acoes);
+            ListView list = rootView.findViewById(R.id.list_detalhes_ultima_acoes);
 
             UltimaAcoesDBHelper dbUltimaAcoes = new UltimaAcoesDBHelper(getContext());
 
@@ -412,7 +413,7 @@ public class MainActivity extends AppCompatActivity
             if (!listaDesignacao.isEmpty()) {
 
                 rootView = inflater.inflate(R.layout.fragment_detalhes_designados, container, false);
-                final ListView list = (ListView) rootView.findViewById(R.id.list_detalhes_designados);
+                final ListView list = rootView.findViewById(R.id.list_detalhes_designados);
 
 
                 list.setAdapter(new DetalhesDesignadosArrayAdapter(getActivity(), android.R.layout.simple_list_item_1, listaDesignacao));
@@ -428,7 +429,7 @@ public class MainActivity extends AppCompatActivity
 
         private View criarTelaDirigentes(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
             View rootView = inflater.inflate(R.layout.fragment_detalhes_dirigentes, container, false);
-            ListView list = (ListView) rootView.findViewById(R.id.list_detalhes_dirigentes);
+            ListView list = rootView.findViewById(R.id.list_detalhes_dirigentes);
 
             DesignacaoDBHelper dbDesignacao = new DesignacaoDBHelper(getActivity());
             List<DesignacaoVO> listaDesignacao = dbDesignacao.buscarDesignacoesTerritorioAberto(null);

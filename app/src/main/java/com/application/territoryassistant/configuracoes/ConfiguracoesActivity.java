@@ -2,16 +2,16 @@ package com.application.territoryassistant.configuracoes;
 
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.application.territoryassistant.R;
 import com.application.territoryassistant.bd.ConfiguracoesDBHelper;
 import com.application.territoryassistant.helper.ToastHelper;
+
+import java.util.Objects;
 
 public class ConfiguracoesActivity extends AppCompatActivity {
 
@@ -19,9 +19,9 @@ public class ConfiguracoesActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_configuracoes);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
 
         configurarAcoes();
 
@@ -34,13 +34,13 @@ public class ConfiguracoesActivity extends AppCompatActivity {
         String textoDirigente = db.buscarTextoDirigente();
         Integer numDias = db.buscarNumDiasEsperaTerritorio();
 
-        final TextView txtTextoPadrao = (TextView)findViewById(R.id.txt_texto_padrao);
+        final TextView txtTextoPadrao = findViewById(R.id.txt_texto_padrao);
         txtTextoPadrao.setText(textoDirigente);
 
-        final TextView txtNumDias = (TextView)findViewById(R.id.txt_num_dias);
+        final TextView txtNumDias = findViewById(R.id.txt_num_dias);
         txtNumDias.setText(numDias.toString());
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab_salvar);
+        FloatingActionButton fab = findViewById(R.id.fab_salvar);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

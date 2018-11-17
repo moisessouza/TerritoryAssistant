@@ -2,8 +2,6 @@ package com.application.territoryassistant.adapter;
 
 import android.content.Context;
 import android.content.Intent;
-import android.content.pm.PackageInfo;
-import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
@@ -12,22 +10,18 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.PopupMenu;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.application.territoryassistant.R;
 import com.application.territoryassistant.bd.DesignacaoDBHelper;
 import com.application.territoryassistant.bd.TerritorioDBHelper;
 import com.application.territoryassistant.bd.UltimaAcoesDBHelper;
 import com.application.territoryassistant.designar.vo.DesignacaoVO;
-import com.application.territoryassistant.dirigentes.vo.DirigentesVO;
 import com.application.territoryassistant.helper.ToastHelper;
 import com.application.territoryassistant.manager.FotoManager;
 import com.application.territoryassistant.territorios.vo.TerritorioVO;
 
 import java.io.File;
-import java.text.DateFormat;
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -81,24 +75,26 @@ public class DetalhesUltimaAcoesArrayAdapter extends ArrayAdapter<UltimaAcoesDBH
             View rowView = inflater.inflate(R.layout.list_detalhes_ultima_acao, parent, false);
             rowView.setTag(vo);
 
-            TextView v = (TextView)rowView.findViewById(R.id.txt_nome_dirigente);
+            TextView v = rowView.findViewById(R.id.txt_nome_dirigente);
             v.setText(nome);
 
-            v = (TextView)rowView.findViewById(R.id.txt_territorios);
+            v = rowView.findViewById(R.id.txt_territorios);
             v.setText(codTerritorios);
 
-            v = (TextView)rowView.findViewById(R.id.txt_acao);
+            v = rowView.findViewById(R.id.txt_acao);
             if ("D".equals(codAcao)){
                 v.setText(context.getString(R.string.designacao));
-                v = (TextView)rowView.findViewById(R.id.lab_data);
+                v.setTextColor(0xff0000ff);
+                v = rowView.findViewById(R.id.lab_data);
                 v.setText(context.getString(R.string.data_inicio));
-                v = (TextView)rowView.findViewById(R.id.txt_data);
+                v = rowView.findViewById(R.id.txt_data);
                 v.setText(dataInicioStr);
             } else {
                 v.setText(context.getString(R.string.devolucao));
-                v = (TextView)rowView.findViewById(R.id.lab_data);
+                v.setTextColor(0xffff0000);
+                v = rowView.findViewById(R.id.lab_data);
                 v.setText(context.getString(R.string.data_fim));
-                v = (TextView)rowView.findViewById(R.id.txt_data);
+                v = rowView.findViewById(R.id.txt_data);
                 v.setText(dataFimStr);
             }
 

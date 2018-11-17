@@ -28,6 +28,7 @@ import com.application.territoryassistant.territorios.vo.TerritorioVO;
 import java.text.DateFormat;
 import java.util.Calendar;
 import java.util.List;
+import java.util.Objects;
 
 public class HistoricoActivity extends AppCompatActivity  {
 
@@ -44,10 +45,10 @@ public class HistoricoActivity extends AppCompatActivity  {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_historio);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
 
         configurarAcoes();
 
@@ -78,7 +79,7 @@ public class HistoricoActivity extends AppCompatActivity  {
         mSectionsPagerAdapterHistorico = new SectionsPagerAdapterHistorico(getSupportFragmentManager(), territorioVOs);
 
         // Set up the ViewPager with the sections adapter.
-        mViewPager = (ViewPager) findViewById(R.id.container);
+        mViewPager = findViewById(R.id.container);
         mViewPager.setAdapter(mSectionsPagerAdapterHistorico);
 
         mViewPager.setCurrentItem(buscarPosicaoTerritorio(territorioVOs, territorioVOInicial));
@@ -141,13 +142,13 @@ public class HistoricoActivity extends AppCompatActivity  {
         private View criarTelaHistorico(TerritorioVO territorioVO, LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
             View rootView = inflater.inflate(R.layout.fragment_historico, container, false);
 
-            TextView mCodTerritorio =(TextView)rootView.findViewById(R.id.txt_cod_territorio);
+            TextView mCodTerritorio = rootView.findViewById(R.id.txt_cod_territorio);
             mCodTerritorio.setText(territorioVO.getCod());
 
             DesignacaoDBHelper dbDesignacao = new DesignacaoDBHelper(getContext());
             List<DesignacaoVO> designacaoVOs = dbDesignacao.buscarDesignacaoPorIdTerritorio(territorioVO.getId());
 
-            ListView list = (ListView)rootView.findViewById(R.id.list_historico);
+            ListView list = rootView.findViewById(R.id.list_historico);
             list.setAdapter(new HistoricoArrayAdapter(getContext(), 0, designacaoVOs));
 
             return rootView;
@@ -184,10 +185,10 @@ public class HistoricoActivity extends AppCompatActivity  {
 
             View view = inflater.inflate(R.layout.list_historico, parent, false);
 
-            TextView tipo = (TextView)view.findViewById(R.id.txt_tipo);
-            TextView nomeDirigente = (TextView)view.findViewById(R.id.txt_nome_dirigente);
-            TextView dataInicio = (TextView)view.findViewById(R.id.txt_data_inicio);
-            TextView dataFim = (TextView)view.findViewById(R.id.txt_data_fim);
+            TextView tipo = view.findViewById(R.id.txt_tipo);
+            TextView nomeDirigente = view.findViewById(R.id.txt_nome_dirigente);
+            TextView dataInicio = view.findViewById(R.id.txt_data_inicio);
+            TextView dataFim = view.findViewById(R.id.txt_data_fim);
 
             String tipoStr = designacaoVO.getTipo();
 
