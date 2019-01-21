@@ -77,6 +77,7 @@ public class DetalhesUltimaAcoesArrayAdapter extends ArrayAdapter<UltimaAcoesDBH
 
             TextView v = rowView.findViewById(R.id.txt_nome_dirigente);
             v.setText(nome);
+            v.setTextColor(0xff000000);
 
             v = rowView.findViewById(R.id.txt_territorios);
             v.setText(codTerritorios);
