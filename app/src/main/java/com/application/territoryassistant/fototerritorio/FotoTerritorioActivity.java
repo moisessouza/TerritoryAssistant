@@ -16,6 +16,7 @@ import android.provider.MediaStore;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
+import android.support.v4.content.FileProvider;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Display;
 import android.view.View;
@@ -116,7 +117,7 @@ public class FotoTerritorioActivity extends AppCompatActivity {
         try {
             File arquivo = criarArquivo();
             takePhotoIntent.putExtra(MediaStore.EXTRA_OUTPUT,
-                    Uri.fromFile(arquivo));
+                    FileProvider.getUriForFile(getApplicationContext(), "com.example.myapp.fileprovider", arquivo));
 
             caminhoCameraFoto = arquivo.getAbsolutePath();
 
@@ -181,6 +182,16 @@ public class FotoTerritorioActivity extends AppCompatActivity {
                         } catch (IOException e){}
                     }
                 }
+
+            } else if (data.getExtras() != null) {
+
+                Bundle extras = data.getExtras();
+                Bitmap imageBitmap = (Bitmap) extras.get("data");
+                String caminhoArquivo = salvarImagem(imageBitmap, caminhoCameraFoto);
+                Intent result = new Intent();
+                result.putExtra("caminhoArquivo", caminhoArquivo);
+                setResult(RESULT_OK, result);
+                finish();
 
             }
         }

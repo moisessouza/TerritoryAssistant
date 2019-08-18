@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.net.Uri;
+import android.support.v4.content.FileProvider;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
@@ -197,7 +198,7 @@ public class DetalhesUltimaAcoesArrayAdapter extends ArrayAdapter<UltimaAcoesDBH
                 }
 
                 if (fileIn.exists()) {
-                    Uri u = Uri.fromFile(fileIn);
+                    Uri u = FileProvider.getUriForFile(getContext(), "com.example.myapp.fileprovider", fileIn);
                     fotos.add(u);
                 }
             }
