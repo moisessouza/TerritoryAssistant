@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout
+<androidx.coordinatorlayout.widget.CoordinatorLayout
     android:id="@+id/layout_foto"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -9,9 +9,9 @@
 
     <include layout="@layout/content_foto_territorio" />
 
-    <android.support.design.widget.FloatingActionButton android:id="@+id/fab_tirar_foto"
+    <com.google.android.material.floatingactionbutton.FloatingActionButton android:id="@+id/fab_tirar_foto"
         android:layout_width="wrap_content" android:layout_height="wrap_content"
         android:layout_gravity="bottom|center_horizontal" android:layout_margin="@dimen/fab_margin"
         android:src="@android:drawable/ic_menu_camera" />
 
-</android.support.design.widget.CoordinatorLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

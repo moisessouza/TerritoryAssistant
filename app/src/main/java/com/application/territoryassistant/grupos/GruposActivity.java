@@ -3,10 +3,10 @@ package com.application.territoryassistant.grupos;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,15 +14,11 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.application.territoryassistant.R;
 import com.application.territoryassistant.bd.GrupoDBHelper;
-import com.application.territoryassistant.bd.TerritorioDBHelper;
 import com.application.territoryassistant.grupos.vo.GrupoVO;
 import com.application.territoryassistant.helper.ToastHelper;
-import com.application.territoryassistant.territorios.EditarTerritorioActivity;
-import com.application.territoryassistant.territorios.vo.TerritorioVO;
 
 import java.util.HashMap;
 import java.util.List;

@@ -9,7 +9,7 @@
     tools:showIn="@layout/activity_historio"
     tools:context="com.application.territoryassistant.historico.HistoricoActivity">
 
-    <android.support.v4.view.ViewPager android:id="@+id/container"
+    <androidx.viewpager.widget.ViewPager android:id="@+id/container"
         android:layout_width="match_parent" android:layout_height="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior" />
 

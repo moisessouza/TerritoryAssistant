@@ -2,10 +2,8 @@ package com.application.territoryassistant.adapter;
 
 import android.content.Context;
 import android.content.Intent;
-import android.content.pm.PackageInfo;
-import android.content.pm.PackageManager;
 import android.net.Uri;
-import android.support.v4.content.FileProvider;
+import androidx.core.content.FileProvider;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
@@ -13,22 +11,18 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.PopupMenu;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.application.territoryassistant.R;
 import com.application.territoryassistant.bd.DesignacaoDBHelper;
 import com.application.territoryassistant.bd.TerritorioDBHelper;
 import com.application.territoryassistant.bd.UltimaAcoesDBHelper;
 import com.application.territoryassistant.designar.vo.DesignacaoVO;
-import com.application.territoryassistant.dirigentes.vo.DirigentesVO;
 import com.application.territoryassistant.helper.ToastHelper;
 import com.application.territoryassistant.manager.FotoManager;
 import com.application.territoryassistant.territorios.vo.TerritorioVO;
 
 import java.io.File;
-import java.text.DateFormat;
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;

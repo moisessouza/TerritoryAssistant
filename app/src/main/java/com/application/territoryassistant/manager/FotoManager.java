@@ -4,6 +4,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Environment;
 
+import com.application.territoryassistant.MainActivity;
 import com.application.territoryassistant.helper.FotoHelper;
 
 import java.io.File;
@@ -80,7 +81,8 @@ public class FotoManager {
     }
 
     private File createOrReturnDirectoryThumb () throws IOException {
-        File folder = new File(Environment.getExternalStorageDirectory() + File.separator + "TerritoryAssistant" + File.separator + "Thumbs" + File.separator);
+
+        File folder = new File(MainActivity.getAppContext().getExternalFilesDir("TerritoryAssistant"), "Thumbs");
 
         if (!folder.exists()){
             folder.mkdirs();
@@ -91,7 +93,8 @@ public class FotoManager {
     }
 
     public File createOrReturnDirectoryPhotos () {
-        File folder = new File(Environment.getExternalStorageDirectory() + File.separator + "TerritoryAssistant" + File.separator + "Fotos" + File.separator);
+
+        File folder = new File(MainActivity.getAppContext().getExternalFilesDir("TerritoryAssistant"),"Fotos");
 
         if (!folder.exists()){
             folder.mkdirs();

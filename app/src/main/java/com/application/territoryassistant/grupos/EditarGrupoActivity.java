@@ -2,10 +2,9 @@ package com.application.territoryassistant.grupos;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -14,8 +13,6 @@ import android.widget.TextView;
 import com.application.territoryassistant.R;
 import com.application.territoryassistant.bd.GrupoDBHelper;
 import com.application.territoryassistant.grupos.vo.GrupoVO;
-import com.application.territoryassistant.territorios.TerritoriosActivity;
-import com.application.territoryassistant.territorios.vo.TerritorioVO;
 
 public class EditarGrupoActivity extends AppCompatActivity {
 
