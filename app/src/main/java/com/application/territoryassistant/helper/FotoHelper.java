@@ -62,6 +62,10 @@ public class FotoHelper {
 
     public static void showPhoto(Context context, String photoPath, final IResultado resultado){
 
+        if (photoPath == null || photoPath.isEmpty()) {
+            return;
+        }
+
         File f = new File(photoPath);
         if (!f.exists()) {
             File fotosDirs = FotoManager.instance().createOrReturnDirectoryPhotos();
