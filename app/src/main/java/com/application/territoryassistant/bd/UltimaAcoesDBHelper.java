@@ -1,83 +1,75 @@
 package com.application.territoryassistant.bd;
 
-import android.content.ContentValues;
 import android.content.Context;
-import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
 
-import com.application.territoryassistant.territorios.vo.TerritorioVO;
-import com.application.territoryassistant.territorios.vo.TerritorioVizinhoVO;
+import com.application.territoryassistant.bd.room.AppDatabase;
+import com.application.territoryassistant.bd.room.UltimaAcoesDao;
+import com.application.territoryassistant.bd.room.UltimaAcoesEntity;
 
 import java.text.DateFormat;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Calendar;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
-/**
- * Created by moises on 30/12/15.
- */
 public class UltimaAcoesDBHelper extends DBHelper {
 
     public static final String TAB_ULTIMA_ACOES = "ULTIMA_ACOES";
+    private final UltimaAcoesDao dao;
+    private final Context context;
 
     public UltimaAcoesDBHelper(Context context){
         super(context);
+        this.context = context;
+        this.dao = AppDatabase.getInstance(context).ultimaAcoesDao();
     }
 
     public void gravarUltimaAcoes(UltimaAcaoVO vo) {
-
-        SQLiteDatabase db = this.getWritableDatabase();
-        ContentValues v = new ContentValues();
-
-        v.put("COD_ACAO", vo.getCodAcao());
-        v.put("COD_TERRITORIOS", vo.getCodTerritorios());
-        v.put("ID_DIRIGENTE", vo.getIdDirigente());
-        v.put("DATA_INICIO", vo.getDataInicio());
-        v.put("DATA_FIM", vo.getDataFim());
-
-        long id = db.insert(TAB_ULTIMA_ACOES, null, v);
-        vo.setId(Long.valueOf(id).intValue());
-
+        if (vo == null) return;
+        UltimaAcoesEntity entity = new UltimaAcoesEntity(
+                0,
+                vo.getCodAcao() != null ? vo.getCodAcao() : "",
+                vo.getCodTerritorios() != null ? vo.getCodTerritorios() : "",
+                vo.getIdDirigente() != null ? vo.getIdDirigente() : 0,
+                vo.getDataInicio(),
+                vo.getDataFim()
+        );
+        long id = dao.insert(entity);
+        vo.setId((int) id);
     }
 
     public List<UltimaAcaoVO> recuperarUltimasAcoes(Integer limit) {
+        int maxLimit = limit != null ? limit : 10;
+        List<UltimaAcoesEntity> entities = dao.getRecent(maxLimit);
+        List<UltimaAcaoVO> result = new ArrayList<>();
 
-        SQLiteDatabase db = this.getReadableDatabase();
+        DirigenteDBHelper dirigenteDBHelper = new DirigenteDBHelper(context);
 
-        StringBuilder builder = new StringBuilder("select ULTIMA_ACOES.ID as ID, COD_ACAO, COD_TERRITORIOS, DATA_INICIO, DATA_FIM, NOME");
-        builder.append(" from ").append(TAB_ULTIMA_ACOES);
-        builder.append(" inner join ").append(DirigenteDBHelper.TAB_DIRIGENTES).append(" on ");
-        builder.append(DirigenteDBHelper.TAB_DIRIGENTES).append(".ID=").append(TAB_ULTIMA_ACOES).append(".ID_DIRIGENTE");
-        builder.append(" order by ULTIMA_ACOES.ID desc ");
-        builder.append(" limit ").append(limit);
+        Calendar c = Calendar.getInstance();
+        DateFormat df = DateFormat.getDateInstance();
 
-        Cursor cursor = db.rawQuery(builder.toString(), null);
+        for (UltimaAcoesEntity e : entities) {
+            String nome = "";
+            com.application.territoryassistant.dirigentes.vo.DirigentesVO dirigente = dirigenteDBHelper.buscarDirigente(e.getIdDirigente());
+            if (dirigente != null) {
+                nome = dirigente.getNome();
+            }
 
-        List<UltimaAcaoVO> ultimaAcaoVOs = new ArrayList<>();
+            String dataInicioStr = "";
+            if (e.getDataInicio() != null) {
+                c.setTimeInMillis(e.getDataInicio());
+                dataInicioStr = df.format(c.getTime());
+            }
 
-        while (cursor.moveToNext()){
-            Integer id = cursor.getInt(cursor.getColumnIndexOrThrow("ID"));
-            String codAcao = cursor.getString(cursor.getColumnIndexOrThrow("COD_ACAO"));
-            String codTerritorios = cursor.getString(cursor.getColumnIndexOrThrow("COD_TERRITORIOS"));
-            String nome = cursor.getString(cursor.getColumnIndexOrThrow("NOME"));
-            Long dataInicio = cursor.getLong(cursor.getColumnIndexOrThrow("DATA_INICIO"));
-            Long dataFim = cursor.getLong(cursor.getColumnIndexOrThrow("DATA_FIM"));
+            String dataFimStr = "";
+            if (e.getDataFim() != null) {
+                c.setTimeInMillis(e.getDataFim());
+                dataFimStr = df.format(c.getTime());
+            }
 
-            Calendar c = Calendar.getInstance();
-            DateFormat df = DateFormat.getDateInstance();
-
-            c.setTimeInMillis(dataInicio);
-            String dataInicioStr = df.format(c.getTime());
-            c.setTimeInMillis(dataFim);
-            String dataFimStr = df.format(c.getTime());
-
-            ultimaAcaoVOs.add(new UltimaAcaoVO(id, codAcao, codTerritorios, nome, dataInicioStr, dataFimStr));
+            result.add(new UltimaAcaoVO(e.getId(), e.getCodAcao(), e.getCodTerritorios(), nome, dataInicioStr, dataFimStr));
         }
 
-        return ultimaAcaoVOs;
+        return result;
     }
 
     public static class UltimaAcaoVO {

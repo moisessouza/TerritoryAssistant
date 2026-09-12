@@ -1,154 +1,81 @@
 package com.application.territoryassistant.bd;
 
-import android.content.ContentValues;
 import android.content.Context;
-import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
-import android.database.sqlite.SQLiteOpenHelper;
 
+import com.application.territoryassistant.bd.room.AppDatabase;
+import com.application.territoryassistant.bd.room.DirigenteDao;
+import com.application.territoryassistant.bd.room.DirigenteEntity;
 import com.application.territoryassistant.dirigentes.vo.DirigentesVO;
 
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by moises on 30/12/15.
- */
 public class DirigenteDBHelper extends DBHelper {
 
     public static final String TAB_DIRIGENTES = "DIRIGENTES";
+    private final DirigenteDao dao;
 
     public DirigenteDBHelper(Context context){
         super(context);
+        this.dao = AppDatabase.getInstance(context).dirigenteDao();
     }
 
     public boolean gravarDirigente(String nome, String email){
-        SQLiteDatabase db = this.getWritableDatabase();
-        ContentValues contentValues = new ContentValues();
-        contentValues.put("NOME", nome);
-        contentValues.put("EMAIL", email);
-        db.insert(TAB_DIRIGENTES, null, contentValues);
+        DirigenteEntity entity = new DirigenteEntity(null, nome, email);
+        dao.insert(entity);
         return true;
     }
 
     public List<DirigentesVO> buscarDirigentes() {
-
-        SQLiteDatabase db = this.getWritableDatabase();
-        Cursor cursor = db.query(true, TAB_DIRIGENTES, new String[]{"ID", "NOME", "EMAIL"}, null, null, null, null, "NOME"+ " ASC", null);
-
-        List<DirigentesVO> dirigentes = new ArrayList<DirigentesVO>();
-
-        while (cursor.moveToNext()){
-            Integer id = cursor.getInt(cursor.getColumnIndexOrThrow("ID"));
-            String nome = cursor.getString(cursor.getColumnIndexOrThrow("NOME"));
-            String email = cursor.getString(cursor.getColumnIndexOrThrow("EMAIL"));
-            dirigentes.add(new DirigentesVO(id, nome, email));
+        List<DirigenteEntity> entities = dao.getAll();
+        List<DirigentesVO> result = new ArrayList<>();
+        for (DirigenteEntity e : entities) {
+            int id = e.getId() != null ? e.getId() : 0;
+            result.add(new DirigentesVO(id, e.getNome(), e.getEmail()));
         }
-
-        return dirigentes;
+        return result;
     }
 
     public boolean deletarDirigente(Integer id){
-
-        SQLiteDatabase db = this.getWritableDatabase();
-        db.delete(TAB_DIRIGENTES, "ID=?", new String [] {id.toString()});
-
+        if (id == null) return false;
+        dao.delete(id);
         return true;
-
     }
 
     public DirigentesVO buscarDirigente(Integer id) {
-
-        SQLiteDatabase db = this.getWritableDatabase();
-
-        //query (boolean distinct, String table, String[] columns, String selection, String[] selectionArgs, String groupBy, String having, String orderBy, String limit)
-        Cursor cursor = db.query(true, TAB_DIRIGENTES, new String[]{"ID", "NOME", "EMAIL"}, "ID=?", new String[] {id.toString()}, null, null, "NOME"+ " ASC", null);
-
-        DirigentesVO vo = null;
-
-        if (cursor.moveToFirst()) {
-            Integer i = cursor.getInt(cursor.getColumnIndexOrThrow("ID"));
-            String nome = cursor.getString(cursor.getColumnIndexOrThrow("NOME"));
-            String email = cursor.getString(cursor.getColumnIndexOrThrow("EMAIL"));
-            vo = new DirigentesVO(i, nome, email);
+        if (id == null) return null;
+        DirigenteEntity e = dao.getById(id);
+        if (e != null) {
+            int eId = e.getId() != null ? e.getId() : 0;
+            return new DirigentesVO(eId, e.getNome(), e.getEmail());
         }
-
-        return vo;
+        return null;
     }
 
     public DirigentesVO atualizarDirigente(DirigentesVO vo) {
-
-        SQLiteDatabase db = this.getWritableDatabase();
-
-        ContentValues v = new ContentValues();
-        v.put("NOME", vo.getNome());
-        v.put("EMAIL", vo.getEmail());
-
-        db.update(TAB_DIRIGENTES, v, "ID=?", new String[]{vo.getId().toString()});
-
+        if (vo == null || vo.getId() == null) return vo;
+        DirigenteEntity entity = new DirigenteEntity(vo.getId(), vo.getNome(), vo.getEmail());
+        dao.update(entity);
         return vo;
-
     }
 
     public List<DirigentesVO> buscarDirigentesPorId(Integer ... ids){
-
-        if (ids == null){
-            return new ArrayList<>();
+        if (ids == null || ids.length == 0) return new ArrayList<>();
+        List<Integer> listIds = new ArrayList<>();
+        for (Integer id : ids) {
+            if (id != null) listIds.add(id);
         }
-
-        SQLiteDatabase db = this.getReadableDatabase();
-
-        StringBuilder args = new StringBuilder();
-        List<String> content = new ArrayList<>();
-
-        for (int i = 0; i < ids.length; i++) {
-            args.append("?");
-            content.add(ids[i].toString());
-
-            if (i != (ids.length - 1)){
-                args.append(",");
-            }
+        if (listIds.isEmpty()) return new ArrayList<>();
+        List<DirigenteEntity> entities = dao.getByIds(listIds);
+        List<DirigentesVO> result = new ArrayList<>();
+        for (DirigenteEntity e : entities) {
+            int eId = e.getId() != null ? e.getId() : 0;
+            result.add(new DirigentesVO(eId, e.getNome(), e.getEmail()));
         }
-
-        Cursor cursor = db.query(true, TAB_DIRIGENTES, new String[]{"ID", "NOME", "EMAIL"}, "ID in (" + args.toString() + ")", content.toArray(new String[]{}), null, null, "NOME"+ " ASC", null);
-
-        DirigentesVO vo = null;
-        List<DirigentesVO> dirigentesVOs = new ArrayList<>();
-
-        while (cursor.moveToNext()) {
-            Integer i = cursor.getInt(cursor.getColumnIndexOrThrow("ID"));
-            String nome = cursor.getString(cursor.getColumnIndexOrThrow("NOME"));
-            String email = cursor.getString(cursor.getColumnIndexOrThrow("EMAIL"));
-            vo = new DirigentesVO(i, nome, email);
-            dirigentesVOs.add(vo);
-        }
-
-        return dirigentesVOs;
-
+        return result;
     }
 
     public boolean possuiDirigentesCadastrado() {
-
-        SQLiteDatabase db = this.getReadableDatabase();
-
-        StringBuilder builder = new StringBuilder();
-        builder.append("select count(ID) as COUNT from ").append(TAB_DIRIGENTES);
-
-        Cursor cursor = db.rawQuery(builder.toString(), null);
-
-        if (cursor.moveToFirst()){
-
-            long count = cursor.getLong(cursor.getColumnIndexOrThrow("COUNT"));
-
-            if (count > 0){
-                return true;
-            } else {
-                return false;
-            }
-
-        } else {
-            return false;
-        }
-
+        return dao.count() > 0;
     }
 }

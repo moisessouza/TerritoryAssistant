@@ -1,69 +1,50 @@
 package com.application.territoryassistant.bd;
 
-import android.content.ContentValues;
 import android.content.Context;
-import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
 
-/**
- * Created by moi09 on 20/02/2016.
- */
-public class ConfiguracoesDBHelper extends DBHelper{
+import com.application.territoryassistant.bd.room.AppDatabase;
+import com.application.territoryassistant.bd.room.ConfiguracoesDao;
+import com.application.territoryassistant.bd.room.ConfiguracoesEntity;
 
-     public static final String TAB_CONFIGURACOES = "CONFIGURACOES";
+public class ConfiguracoesDBHelper extends DBHelper {
+
+    public static final String TAB_CONFIGURACOES = "CONFIGURACOES";
+    private final ConfiguracoesDao dao;
 
     public ConfiguracoesDBHelper(Context context) {
         super(context);
+        this.dao = AppDatabase.getInstance(context).configuracoesDao();
     }
 
     public void atualizarTextoDirigente(String texto) {
-
-        SQLiteDatabase db = getWritableDatabase();
-
-        ContentValues contentValues = new ContentValues();
-        contentValues.put("TEXTO_PADRAO_DIRIGENTE_TERRITORIO", texto);
-
-        db.update(TAB_CONFIGURACOES, contentValues, "ID=?", new String[]{"1"});
-
+        ensureDefaultConfig();
+        dao.updateTextoDirigente(texto);
     }
 
     public void atualizarNumDiasDescanso(Integer numDias) {
-
-        SQLiteDatabase db = getWritableDatabase();
-
-        ContentValues contentValues = new ContentValues();
-        contentValues.put("NUM_DIAS_ESPERA_TERRITORIO", numDias);
-
-        db.update(TAB_CONFIGURACOES, contentValues, "ID=?", new String[]{"1"});
-
+        ensureDefaultConfig();
+        dao.updateNumDiasEspera(numDias != null ? numDias : 15);
     }
 
     public String buscarTextoDirigente(){
-
-        SQLiteDatabase db = getReadableDatabase();
-
-        Cursor c = db.query(TAB_CONFIGURACOES, new String[]{"TEXTO_PADRAO_DIRIGENTE_TERRITORIO"}, "ID=?", new String[]{"1"}, null, null, null);
-
-        if(c.moveToFirst()) {
-            return c.getString(c.getColumnIndexOrThrow("TEXTO_PADRAO_DIRIGENTE_TERRITORIO"));
+        ConfiguracoesEntity config = dao.getConfig();
+        if (config != null && config.getTextoPadraoDirigenteTerritorio() != null) {
+            return config.getTextoPadraoDirigenteTerritorio();
         }
-
         return "";
-
     }
 
     public Integer buscarNumDiasEsperaTerritorio(){
-
-        SQLiteDatabase db = getReadableDatabase();
-
-        Cursor c = db.query(TAB_CONFIGURACOES, new String[]{"NUM_DIAS_ESPERA_TERRITORIO"}, "ID=?", new String[]{"1"}, null, null, null);
-
-        if(c.moveToFirst()) {
-            return c.getInt(c.getColumnIndexOrThrow("NUM_DIAS_ESPERA_TERRITORIO"));
+        ConfiguracoesEntity config = dao.getConfig();
+        if (config != null && config.getNumDiasEsperaTerritorio() != null) {
+            return config.getNumDiasEsperaTerritorio();
         }
-
-        return 0;
-
+        return 15;
     }
 
+    private void ensureDefaultConfig() {
+        if (dao.getConfig() == null) {
+            dao.insertOrUpdate(new ConfiguracoesEntity(1, "Texto padrão", 15));
+        }
+    }
 }

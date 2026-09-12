@@ -7,10 +7,10 @@
 - [x] **Phase 1: Kotlin Integration & Setup**
   - [x] Add Kotlin plugin and dependencies
   - [x] Configure JVM toolchain
-- [ ] **Phase 2: Data Layer (Room Migration)**
-  - [ ] Add Room dependencies
-  - [ ] Define Room Entities and DAOs
-  - [ ] Implement Room Database
+- [x] **Phase 2: Data Layer (Room Migration)**
+  - [x] Add Room dependencies
+  - [x] Define Room Entities and DAOs
+  - [x] Implement Room Database
 - [ ] **Phase 3: MVVM Architecture**
   - [ ] Create Repositories and ViewModels
   - [ ] Integrate Coroutines and StateFlow
