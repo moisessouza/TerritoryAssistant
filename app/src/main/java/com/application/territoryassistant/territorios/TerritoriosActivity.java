@@ -332,82 +332,82 @@ public class TerritoriosActivity extends AppCompatActivity {
 
                     List<TerritorioVO> territorioVOs;
 
-                    switch (item.getItemId()) {
-                        case R.id.menu_editar:
-                            Intent intentEditar = new Intent(TerritoriosActivity.this, EditarTerritorioActivity.class);
-                            intentEditar.putExtra("ID", vo.getId());
-                            startActivity(intentEditar);
-                            return true;
-                        case R.id.menu_deletar:
+                    int itemId = item.getItemId();
+                    if (itemId == R.id.menu_editar) {
+                        Intent intentEditar = new Intent(TerritoriosActivity.this, EditarTerritorioActivity.class);
+                        intentEditar.putExtra("ID", vo.getId());
+                        startActivity(intentEditar);
+                        return true;
+                    } else if (itemId == R.id.menu_deletar) {
 
-                            boolean possuiDesignacao = dbDesignacao.possuiDesignacao(vo.getId());
-                            if (!possuiDesignacao) {
-                                new AlertDialog.Builder(TerritoriosActivity.this)
-                                        .setIcon(android.R.drawable.ic_dialog_alert)
-                                        .setMessage(getString(R.string.certeza_deletar_territorio))
-                                        .setPositiveButton(getString(R.string.sim), new DialogInterface.OnClickListener() {
-                                            @Override
-                                            public void onClick(DialogInterface dialog, int which) {
-                                                db.deletarTerritorio(vo.getId());
-                                                adapter.remove(vo);
-                                                adapter.notifyDataSetChanged();
-                                            }
+                        boolean possuiDesignacao = dbDesignacao.possuiDesignacao(vo.getId());
+                        if (!possuiDesignacao) {
+                            new AlertDialog.Builder(TerritoriosActivity.this)
+                                    .setIcon(android.R.drawable.ic_dialog_alert)
+                                    .setMessage(getString(R.string.certeza_deletar_territorio))
+                                    .setPositiveButton(getString(R.string.sim), new DialogInterface.OnClickListener() {
+                                        @Override
+                                        public void onClick(DialogInterface dialog, int which) {
+                                            db.deletarTerritorio(vo.getId());
+                                            adapter.remove(vo);
+                                            adapter.notifyDataSetChanged();
+                                        }
 
-                                        })
-                                        .setNegativeButton(R.string.nao, null)
-                                        .show();
-                            } else {
-                                Toast toast = Toast.makeText(TerritoriosActivity.this, getString(R.string.territorio_ja_designado), Toast.LENGTH_SHORT);
-                                toast.show();
-                            }
-                            return true;
-                        case R.id.menu_historico:
-                            Intent intentHistorico = new Intent(TerritoriosActivity.this, HistoricoActivity.class);
-                            intentHistorico.putExtra("TerritorioVO", vo);
-                            startActivity(intentHistorico);
-                            return true;
-                        case R.id.menu_ver_vizinhos:
+                                    })
+                                    .setNegativeButton(R.string.nao, null)
+                                    .show();
+                        } else {
+                            Toast toast = Toast.makeText(TerritoriosActivity.this, getString(R.string.territorio_ja_designado), Toast.LENGTH_SHORT);
+                            toast.show();
+                        }
+                        return true;
+                    } else if (itemId == R.id.menu_historico) {
+                        Intent intentHistorico = new Intent(TerritoriosActivity.this, HistoricoActivity.class);
+                        intentHistorico.putExtra("TerritorioVO", vo);
+                        startActivity(intentHistorico);
+                        return true;
+                    } else if (itemId == R.id.menu_ver_vizinhos) {
 
-                            List<TerritorioVizinhoVO> territorioVizinhoVOs = dbTerritorio.buscarVizinhos(vo.getId());
-                            List<Integer> idVizinhos = new ArrayList<Integer>();
-                            for (TerritorioVizinhoVO voVizinho : territorioVizinhoVOs) {
-                                idVizinhos.add(voVizinho.getIdVizinho());
-                            }
+                        List<TerritorioVizinhoVO> territorioVizinhoVOs = dbTerritorio.buscarVizinhos(vo.getId());
+                        List<Integer> idVizinhos = new ArrayList<Integer>();
+                        for (TerritorioVizinhoVO voVizinho : territorioVizinhoVOs) {
+                            idVizinhos.add(voVizinho.getIdVizinho());
+                        }
 
-                            territorioVOs = dbTerritorio.buscarTerritoriosPorId(idVizinhos.toArray(new Integer[]{}));
+                        territorioVOs = dbTerritorio.buscarTerritoriosPorId(idVizinhos.toArray(new Integer[]{}));
 
-                            if (!territorioVOs.isEmpty()) {
-                                AlertDialog.Builder builder = new AlertDialog.Builder(TerritoriosActivity.this);
-                                builder.setTitle(getString(R.string.territorios_vizinhos));
-                                builder.setPositiveButton(getString(R.string.OK), new DialogInterface.OnClickListener() {
-                                    @Override
-                                    public void onClick(DialogInterface dialog, int which) {
-                                        //Blank
-                                    }
-                                });
-                                TerritoriosArrayAdapter adapter = new TerritoriosArrayAdapter(TerritoriosActivity.this,
-                                        android.R.layout.simple_list_item_1, territorioVOs, true);
-                                builder.setAdapter(adapter, null);
-                                builder.show();
-                            } else {
-                                ToastHelper.toast(TerritoriosActivity.this, getString(R.string.sem_territorios_vizinhos));
-                            }
+                        if (!territorioVOs.isEmpty()) {
+                            AlertDialog.Builder builder = new AlertDialog.Builder(TerritoriosActivity.this);
+                            builder.setTitle(getString(R.string.territorios_vizinhos));
+                            builder.setPositiveButton(getString(R.string.OK), new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    //Blank
+                                }
+                            });
+                            TerritoriosArrayAdapter adapter = new TerritoriosArrayAdapter(TerritoriosActivity.this,
+                                    android.R.layout.simple_list_item_1, territorioVOs, true);
+                            builder.setAdapter(adapter, null);
+                            builder.show();
+                        } else {
+                            ToastHelper.toast(TerritoriosActivity.this, getString(R.string.sem_territorios_vizinhos));
+                        }
 
-                            return true;
+                        return true;
 
-                        case R.id.menu_designar:
-                            DirigenteDBHelper dbDirigente = new DirigenteDBHelper(TerritoriosActivity.this);
-                            if (dbDirigente.possuiDirigentesCadastrado()) {
-                                Intent intent = new Intent(TerritoriosActivity.this, DesignarActivity.class);
-                                territorioVOs = dbTerritorio.buscarTerritoriosPorId(vo.getId());
-                                intent.putExtra("listaSugerir", territorioVOs.toArray(new TerritorioVO[]{}));
-                                startActivity(intent);
-                            } else {
-                                ToastHelper.toast(TerritoriosActivity.this, getString(R.string.cadastre_um_dirigente));
-                            }
-                            return true;
-                        default:
-                            return false;
+                    } else if (itemId == R.id.menu_designar) {
+                        DirigenteDBHelper dbDirigente = new DirigenteDBHelper(TerritoriosActivity.this);
+                        if (dbDirigente.possuiDirigentesCadastrado()) {
+                            Intent intent = new Intent(TerritoriosActivity.this, DesignarActivity.class);
+                            territorioVOs = dbTerritorio.buscarTerritoriosPorId(vo.getId());
+                            intent.putExtra("listaSugerir", territorioVOs.toArray(new TerritorioVO[]{}));
+                            startActivity(intent);
+                        } else {
+                            ToastHelper.toast(TerritoriosActivity.this, getString(R.string.cadastre_um_dirigente));
+                        }
+                        return true;
+                    } else {
+                        return false;
                     }
 
                 }

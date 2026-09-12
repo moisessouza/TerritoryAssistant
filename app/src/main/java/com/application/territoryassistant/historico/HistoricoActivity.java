@@ -213,23 +213,23 @@ public class HistoricoActivity extends AppCompatActivity  {
                         @Override
                         public boolean onMenuItemClick(MenuItem item) {
 
-                            switch (item.getItemId()) {
-                                case R.id.menu_deletar:
-                                    new AlertDialog.Builder(getContext())
-                                            .setIcon(android.R.drawable.ic_dialog_alert)
-                                            .setMessage(getContext().getString(R.string.tem_certeza_deletar_registro))
-                                            .setPositiveButton(getContext().getString(R.string.sim), new DialogInterface.OnClickListener() {
-                                                @Override
-                                                public void onClick(DialogInterface dialog, int which) {
-                                                    dbDesignacao.deletarDesignacao(designacaoVO.getId());
-                                                    HistoricoArrayAdapter.this.designacaoVOs.remove(designacaoVO);
-                                                    HistoricoArrayAdapter.this.notifyDataSetChanged();
-                                                }
+                            int itemId = item.getItemId();
+                            if (itemId == R.id.menu_deletar) {
+                                new AlertDialog.Builder(getContext())
+                                        .setIcon(android.R.drawable.ic_dialog_alert)
+                                        .setMessage(getContext().getString(R.string.tem_certeza_deletar_registro))
+                                        .setPositiveButton(getContext().getString(R.string.sim), new DialogInterface.OnClickListener() {
+                                            @Override
+                                            public void onClick(DialogInterface dialog, int which) {
+                                                dbDesignacao.deletarDesignacao(designacaoVO.getId());
+                                                HistoricoArrayAdapter.this.designacaoVOs.remove(designacaoVO);
+                                                HistoricoArrayAdapter.this.notifyDataSetChanged();
+                                            }
 
-                                            })
-                                            .setNegativeButton(getContext().getString(R.string.nao), null)
-                                            .show();
-                                    return true;
+                                        })
+                                        .setNegativeButton(getContext().getString(R.string.nao), null)
+                                        .show();
+                                return true;
                             }
 
                             return false;

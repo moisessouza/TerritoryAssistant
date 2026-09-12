@@ -108,26 +108,26 @@ public class DetalhesUltimaAcoesArrayAdapter extends ArrayAdapter<UltimaAcoesDBH
                         @Override
                         public boolean onMenuItemClick(MenuItem item) {
 
-                            switch (item.getItemId()) {
-                                case R.id.menu_enviar_mensagem:
-                                    if ("D".equals(codAcao)) {
-                                        enviarDesignacao(vo);
-                                    } else {
-                                        enviarDevolucao(vo);
+                            int itemId = item.getItemId();
+                            if (itemId == R.id.menu_enviar_mensagem) {
+                                if ("D".equals(codAcao)) {
+                                    enviarDesignacao(vo);
+                                } else {
+                                    enviarDevolucao(vo);
+                                }
+                                return true;
+                            } else if (itemId == R.id.menu_marcar_registros) {
+                                List<TerritorioVO> territorioVOs = dbTerritorio.buscarTerritoriosPorCod(vo.getCodTerritorios());
+                                for (TerritorioVO territorio : territorioVOs) {
+                                    List<DesignacaoVO> designacaoVOs = dbDesignacao.buscarDesignacoesTerritorioAberto(territorio.getCod());
+                                    for (DesignacaoVO designacao : designacaoVOs) {
+                                        dbDesignacao.marcarRegistro(designacao);
                                     }
-                                    return true;
-                                case R.id.menu_marcar_registros:
-                                    List<TerritorioVO> territorioVOs = dbTerritorio.buscarTerritoriosPorCod(vo.getCodTerritorios());
-                                    for (TerritorioVO territorio : territorioVOs) {
-                                        List<DesignacaoVO> designacaoVOs = dbDesignacao.buscarDesignacoesTerritorioAberto(territorio.getCod());
-                                        for (DesignacaoVO designacao : designacaoVOs) {
-                                            dbDesignacao.marcarRegistro(designacao);
-                                        }
-                                    }
-                                    ToastHelper.toast(context, context.getString(R.string.registros_marcados_aba_designados));
-                                    return true;
-                                default:
-                                    return false;
+                                }
+                                ToastHelper.toast(context, context.getString(R.string.registros_marcados_aba_designados));
+                                return true;
+                            } else {
+                                return false;
                             }
                         }
                     });

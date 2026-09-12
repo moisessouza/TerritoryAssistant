@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/TerritoryAssistant.iml" filepath="$PROJECT_DIR$/TerritoryAssistant.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/TerritoryAssistant.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/TerritoryAssistant.app.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/TerritoryAssistant.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/TerritoryAssistant.app.androidTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/TerritoryAssistant.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/TerritoryAssistant.app.main.iml" />

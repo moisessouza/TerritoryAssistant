@@ -1,0 +1,21 @@
+# Task Checklist: TerritoryAssistant Modernization
+
+- [x] **Phase 0: Build Fixes & Stabilization**
+  - [x] Upgrade Gradle wrapper and AGP
+  - [x] Fix Java compilation issues with menu IDs (`R.id.*`)
+  - [x] Ensure clean build and unit test execution
+- [x] **Phase 1: Kotlin Integration & Setup**
+  - [x] Add Kotlin plugin and dependencies
+  - [x] Configure JVM toolchain
+- [ ] **Phase 2: Data Layer (Room Migration)**
+  - [ ] Add Room dependencies
+  - [ ] Define Room Entities and DAOs
+  - [ ] Implement Room Database
+- [ ] **Phase 3: MVVM Architecture**
+  - [ ] Create Repositories and ViewModels
+  - [ ] Integrate Coroutines and StateFlow
+- [ ] **Phase 4: UI Migration (Jetpack Compose & M3)**
+  - [ ] Enable Compose & Material 3
+  - [ ] Migrate screens to Composable UI
+- [ ] **Phase 5: Testing**
+  - [ ] Add unit and UI tests

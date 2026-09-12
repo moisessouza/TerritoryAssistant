@@ -112,18 +112,18 @@ public class DetalhesDesignadosArrayAdapter extends ArrayAdapter<DesignacaoVO> {
                             @Override
                             public boolean onMenuItemClick(MenuItem item) {
 
-                                switch (item.getItemId()) {
-                                    case R.id.menu_marcar:
-                                        marcarDesmarcarRegistro(vo);
-                                        return true;
-                                    case R.id.menu_desmarcar:
-                                        marcarDesmarcarRegistro(vo);
-                                        return true;
-                                    case R.id.menu_fechar:
-                                        fecharRegistro(vo);
-                                        return true;
-                                    default:
-                                        return false;
+                                int itemId = item.getItemId();
+                                if (itemId == R.id.menu_marcar) {
+                                    marcarDesmarcarRegistro(vo);
+                                    return true;
+                                } else if (itemId == R.id.menu_desmarcar) {
+                                    marcarDesmarcarRegistro(vo);
+                                    return true;
+                                } else if (itemId == R.id.menu_fechar) {
+                                    fecharRegistro(vo);
+                                    return true;
+                                } else {
+                                    return false;
                                 }
 
 
