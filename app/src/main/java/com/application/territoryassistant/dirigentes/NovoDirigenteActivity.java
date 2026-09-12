@@ -2,20 +2,23 @@ package com.application.territoryassistant.dirigentes;
 
 import android.content.Intent;
 import android.os.Bundle;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.lifecycle.ViewModelProvider;
+
 import com.application.territoryassistant.R;
-import com.application.territoryassistant.bd.DirigenteDBHelper;
 import com.application.territoryassistant.helper.ToastHelper;
+import com.application.territoryassistant.viewmodel.LeaderViewModel;
+import com.application.territoryassistant.viewmodel.ViewModelFactory;
 
 public class NovoDirigenteActivity extends AppCompatActivity {
 
-    DirigenteDBHelper db = new DirigenteDBHelper(this);
+    private LeaderViewModel viewModel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,10 +27,13 @@ public class NovoDirigenteActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar_novo_dirigente);
         setSupportActionBar(toolbar);
 
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        viewModel = new ViewModelProvider(this, new ViewModelFactory(this)).get(LeaderViewModel.class);
+
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        }
 
         configurarAcoes();
-
     }
 
     private void configurarAcoes (){
@@ -45,10 +51,12 @@ public class NovoDirigenteActivity extends AppCompatActivity {
                 String email = txtEmail.getText().toString();
 
                 if (!d.isEmpty()) {
-                    db.gravarDirigente(d, email);
-                    mensagem.setText(getString(R.string.dirigente_inserido, d));
-                    txtNomeDirigente.setText(null);
-                    txtEmail.setText(null);
+                    viewModel.addLeader(d, email, success -> {
+                        mensagem.setText(getString(R.string.dirigente_inserido, d));
+                        txtNomeDirigente.setText(null);
+                        txtEmail.setText(null);
+                        return null;
+                    });
                 } else {
                     ToastHelper.toast(NovoDirigenteActivity.this, getString(R.string.nome_obrigatorio));
                 }

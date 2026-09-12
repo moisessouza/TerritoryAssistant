@@ -3,10 +3,6 @@ package com.application.territoryassistant.grupos;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,18 +11,27 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.lifecycle.ViewModelProvider;
+
 import com.application.territoryassistant.R;
-import com.application.territoryassistant.bd.GrupoDBHelper;
+import com.application.territoryassistant.bd.room.GrupoEntity;
 import com.application.territoryassistant.grupos.vo.GrupoVO;
 import com.application.territoryassistant.helper.ToastHelper;
+import com.application.territoryassistant.viewmodel.GroupUiState;
+import com.application.territoryassistant.viewmodel.GroupViewModel;
+import com.application.territoryassistant.viewmodel.ViewModelFactory;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 public class GruposActivity extends AppCompatActivity {
 
-    GrupoDBHelper db = new GrupoDBHelper(this);
+    private GroupViewModel viewModel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +40,8 @@ public class GruposActivity extends AppCompatActivity {
         setContentView(R.layout.activity_grupos);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        viewModel = new ViewModelProvider(this, new ViewModelFactory(this)).get(GroupViewModel.class);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab_grupos);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -45,22 +52,37 @@ public class GruposActivity extends AppCompatActivity {
             }
         });
 
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        }
 
-        carregarGrupos();
-
+        observarGrupos();
     }
 
-    private void carregarGrupos(){
+    @Override
+    protected void onResume() {
+        super.onResume();
+        viewModel.loadGroups();
+    }
 
-        List<GrupoVO> grupoVOs = db.buscarGrupos();
+    private void observarGrupos(){
+        ListView listView = (ListView) findViewById(R.id.list_grupos);
 
-        ListView listView = (ListView)findViewById(R.id.list_grupos);
+        viewModel.getUiState().observe(this, state -> {
+            if (state instanceof GroupUiState.Success) {
+                GroupUiState.Success success = (GroupUiState.Success) state;
+                List<GrupoVO> grupoVOs = new ArrayList<>();
+                for (GrupoEntity entity : success.getGroups()) {
+                    int id = entity.getId() != null ? entity.getId() : 0;
+                    grupoVOs.add(new GrupoVO(id, entity.getNome()));
+                }
+                GruposArrayAdapter adapter = new GruposArrayAdapter(this,
+                        android.R.layout.simple_list_item_1, grupoVOs);
+                listView.setAdapter(adapter);
+            }
+        });
 
-        GruposArrayAdapter adapter = new GruposArrayAdapter(this,
-                android.R.layout.simple_list_item_1, grupoVOs);
-        listView.setAdapter(adapter);
-
+        viewModel.loadGroups();
     }
 
     private class GruposArrayAdapter extends ArrayAdapter<GrupoVO> {
@@ -111,14 +133,16 @@ public class GruposActivity extends AppCompatActivity {
                     ImageView i = (ImageView) v;
                     GrupoVO vo = (GrupoVO) i.getTag();
 
-                    boolean possuiTerritorio = db.possuiTerritorio(vo.getId());
-                    if (!possuiTerritorio) {
-                        db.deletarGrupo(vo.getId());
-                        GruposArrayAdapter.this.remove(vo);
-                        GruposArrayAdapter.this.notifyDataSetChanged();
-                    } else {
-                        ToastHelper.toast(GruposActivity.this, getString(R.string.grupo_associado_territorio));
-                    }
+                    viewModel.deleteGroup(vo.getId(), (success, errorMsg) -> {
+                        if (success) {
+                            GruposArrayAdapter.this.remove(vo);
+                            GruposArrayAdapter.this.notifyDataSetChanged();
+                        } else {
+                            String msg = errorMsg != null ? errorMsg : getString(R.string.grupo_associado_territorio);
+                            ToastHelper.toast(GruposActivity.this, msg);
+                        }
+                        return null;
+                    });
                 }
 
             });

@@ -8,14 +8,23 @@
   - [x] Add Kotlin plugin and dependencies
   - [x] Configure JVM toolchain
 - [x] **Phase 2: Data Layer (Room Migration)**
-  - [x] Add Room dependencies
+  - [x] Add Room dependencies and KSP
   - [x] Define Room Entities and DAOs
-  - [x] Implement Room Database
-- [ ] **Phase 3: MVVM Architecture**
-  - [ ] Create Repositories and ViewModels
-  - [ ] Integrate Coroutines and StateFlow
+  - [x] Implement Room Database & bridge legacy DB helpers
+- [x] **Phase 3.1: Repositories & Coroutines Setup**
+  - [x] Add ViewModel/Lifecycle dependencies
+  - [x] Implement Repository classes
+- [x] **Phase 3.2: MVVM Migration - Leaders & Groups**
+  - [x] Create LeaderViewModel & GroupViewModel
+  - [x] Connect Leaders & Groups Activities
+- [ ] **Phase 3.3: MVVM Migration - Territory Management**
+  - [ ] Create TerritoryViewModel
+  - [ ] Connect Territory Activities
+- [ ] **Phase 3.4: MVVM Migration - Designations, History & Suggestions**
+  - [ ] Create Designation, History, Settings & Suggestion ViewModels
+  - [ ] Connect remaining Activities
 - [ ] **Phase 4: UI Migration (Jetpack Compose & M3)**
   - [ ] Enable Compose & Material 3
   - [ ] Migrate screens to Composable UI
 - [ ] **Phase 5: Testing**
-  - [ ] Add unit and UI tests
+  - [ ] Add unit and UI tests for ViewModels & Compose
